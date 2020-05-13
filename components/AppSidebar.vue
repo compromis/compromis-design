@@ -73,6 +73,9 @@
           <b-nav-item v-scroll-to="'#manual-xarxes'" href="#manual-xarxes">
             Manual de xarxes
           </b-nav-item>
+          <b-nav-item v-scroll-to="'#url-curtes'" href="#url-curtes">
+            URLs curtes
+          </b-nav-item>
         </b-nav>
       </li>
       <li>
