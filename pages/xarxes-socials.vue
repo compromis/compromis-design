@@ -119,6 +119,37 @@
         </p>
       </div>
     </div>
+
+    <h2 id="url-curtes">
+      URLs curtes
+    </h2>
+    <div class="row">
+      <div class="col-md-8">
+        <p class="mb-0">
+          Si voleu compartir un enllaç molt llarg i el voleu reduir per raons estètiques,
+          ara podeu generar enllaços curts amb el domini <strong>comprom.is</strong>
+        </p>
+        <figure class="text-center">
+          <div class="text-muted">
+            https://www.eldiario.es/cv/economia/Conselleria-Agricultura-millones-pesquero-coronavirus_0_1026448418.html
+          </div>
+          <div class="my-3">
+            <fa :icon="['far', 'chevron-down']" />
+          </div>
+          <div class="font-weight-bold">
+            <u>comprom.is/ajagri</u>
+          </div>
+        </figure>
+      </div>
+      <div class="col-md-4 d-flex align-items-end mt-4 mt-xl-0">
+        <p class="mb-0">
+          <c-button href="https://comprom.is/crea" variant="outline-primary" size="lg" target="_blank">
+            <fa :icon="['far', 'link']" /> Acurtador d'enllaços
+          </c-button>
+          <small class="text-muted ml-2"><fa :icon="['far', 'lock-alt']" /></small>
+        </p>
+      </div>
+    </div>
   </div>
 </template>
 
