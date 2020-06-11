@@ -27,7 +27,7 @@
     <other-card />
 
     <div class="cardless-text">
-      <p>No trobes el que busques? Busca al repositori de <a href="https://onedrive.live.com/?id=49217E5E07CD52BD%21185814&cid=49217E5E07CD52BD" target="_blank" rel="noopener noreferrer">material antic</a>.</p>
+      <p>No trobes el que busques? Busca al repositori de <a href="https://comprom.is/material" target="_blank" rel="noopener noreferrer">material antic</a>.</p>
     </div>
   </div>
 </template>
