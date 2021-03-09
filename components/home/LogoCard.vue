@@ -28,7 +28,7 @@
         </div>
         <div>
           <label for="localName">Genera el logo del teu col·lectiu</label>
-          <custom-local-generator @name-change="(name) => localName = name" :municipalities="municipalities" />
+          <custom-local-generator :municipalities="municipalities" @name-change="(name) => localName = name" />
         </div>
       </div>
     </div>

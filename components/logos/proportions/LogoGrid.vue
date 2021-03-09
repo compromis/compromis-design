@@ -1,7 +1,7 @@
 <template>
   <figure>
     <div class="controls">
-      <c-button @click="showGrid = !showGrid" size="sm" class="toggle-button">
+      <c-button size="sm" class="toggle-button" @click="showGrid = !showGrid">
         <span v-if="showGrid">
           <fa :icon="['far', 'eye']" /> Guies
         </span>

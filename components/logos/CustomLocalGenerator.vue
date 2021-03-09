@@ -2,15 +2,15 @@
   <div class="input-group generator">
     <input
       id="localName"
-      @input="updateName"
       :value="name"
-      @keypress="preventTyping"
-      @keydown.delete="resetTyping"
-      @keypress.enter="download('H')"
       type="text"
       class="form-control form-control-lg"
       placeholder="Alacant"
       list="municipalities"
+      @input="updateName"
+      @keypress="preventTyping"
+      @keydown.delete="resetTyping"
+      @keypress.enter="download('H')"
     >
     <div class="input-group-append">
       <b-dropdown size="lg" text="Descarrega">
@@ -19,16 +19,16 @@
           col·lectiu local o comarcal de Compromís
         </b-dropdown-item>
         <b-dropdown-divider v-if="!canDownload" />
-        <b-dropdown-item @click="download('H', 'svg')" :disabled="!canDownload">
+        <b-dropdown-item :disabled="!canDownload" @click="download('H', 'svg')">
           Horitzontal <span class="text-muted">(.svg)</span>
         </b-dropdown-item>
-        <b-dropdown-item @click="download('H', 'png')" :disabled="!canDownload">
+        <b-dropdown-item :disabled="!canDownload" @click="download('H', 'png')">
           Horitzontal <span class="text-muted">(.png)</span>
         </b-dropdown-item>
-        <b-dropdown-item @click="download('V', 'svg')" :disabled="!canDownload">
+        <b-dropdown-item :disabled="!canDownload" @click="download('V', 'svg')">
           Comprimida <span class="text-muted">(.svg)</span>
         </b-dropdown-item>
-        <b-dropdown-item @click="download('V', 'png')" :disabled="!canDownload">
+        <b-dropdown-item :disabled="!canDownload" @click="download('V', 'png')">
           Comprimida <span class="text-muted">(.png)</span>
         </b-dropdown-item>
       </b-dropdown>
@@ -114,7 +114,7 @@ export default {
 
     download (version, format) {
       if (!this.municipalities.includes(this.name)) {
-        alert(`Has d'escriure un nom vàlid d'un col·lectiu local o comarcal de Compromís`)
+        alert('Has d\'escriure un nom vàlid d\'un col·lectiu local o comarcal de Compromís')
         return
       }
 

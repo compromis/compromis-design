@@ -9,19 +9,19 @@
               <app-sidebar />
             </div>
             <button
-              @click="toggleSidebar"
               :aria-expanded="sidebarOpen"
               type="button"
               aria-label="Obrir menú"
               aria-controls="sidebar"
               class="navbar-toggler sidebar-toggler d-block d-lg-none"
+              @click="toggleSidebar"
             >
               <span class="navbar-toggler-icon" />
             </button>
           </aside>
         </div>
         <div class="content-wrapper">
-          <div @click="sidebarOpen = false" class="content">
+          <div class="content" @click="sidebarOpen = false">
             <main>
               <nuxt />
             </main>
@@ -51,14 +51,6 @@ export default {
     }
   },
 
-  head () {
-    return {
-      bodyAttrs: {
-        class: 'background-white'
-      }
-    }
-  },
-
   watch: {
     '$route' () {
       this.sidebarOpen = false
@@ -68,6 +60,14 @@ export default {
   methods: {
     toggleSidebar () {
       this.sidebarOpen = !this.sidebarOpen
+    }
+  },
+
+  head () {
+    return {
+      bodyAttrs: {
+        class: 'background-white'
+      }
     }
   }
 }

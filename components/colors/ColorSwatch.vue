@@ -1,6 +1,6 @@
 <template>
   <div :class="{'color': true, 'color--mini': mini }">
-    <button v-clipboard:copy="hex" v-clipboard:success="onCopy" @mouseleave="onLeave" :class="`color-swatch color-swatch-${name}`" href="#">
+    <button v-clipboard:copy="hex" v-clipboard:success="onCopy" :class="`color-swatch color-swatch-${name}`" href="#" @mouseleave="onLeave">
       <span :class="{'color-swatch-text': true, 'color-swatch-text-dark': dark }">{{ text }}</span>
     </button>
     <h4 v-if="!mini">
@@ -13,19 +13,19 @@
       <div class="color-info-value">
         <span>RGB</span>
         <div v-for="(rgbValue, i) in rgbValues" :key="i">
-          <div :style="{ backgroundColor: hexValues[i] }" v-if="rgbValues.length > 1" class="color-sample" /> {{ rgbValue }}
+          <div v-if="rgbValues.length > 1" :style="{ backgroundColor: hexValues[i] }" class="color-sample" /> {{ rgbValue }}
         </div>
       </div>
       <div class="color-info-value">
         <span>HEX</span>
         <div v-for="(hexValue, i) in hexValues" :key="i">
-          <div :style="{ backgroundColor: hexValues[i] }" v-if="hexValues.length > 1" class="color-sample" /> {{ hexValue }}
+          <div v-if="hexValues.length > 1" :style="{ backgroundColor: hexValues[i] }" class="color-sample" /> {{ hexValue }}
         </div>
       </div>
       <div class="color-info-value">
         <span>CMYK</span>
         <div v-for="(cmykValue, i) in cmykValues" :key="i">
-          <div :style="{ backgroundColor: hexValues[i] }" v-if="cmykValues.length > 1" class="color-sample" /> {{ cmykValue }}
+          <div v-if="cmykValues.length > 1" :style="{ backgroundColor: hexValues[i] }" class="color-sample" /> {{ cmykValue }}
         </div>
       </div>
     </div>

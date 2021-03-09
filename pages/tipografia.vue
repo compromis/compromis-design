@@ -65,7 +65,7 @@ export default {
 
   head () {
     return {
-      title: `Tipografia - Manual d'estil - Compromís`
+      title: 'Tipografia - Manual d\'estil - Compromís'
     }
   }
 }

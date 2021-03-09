@@ -27,6 +27,11 @@
           <h4><fa :icon="['far', 'megaphone']" fixed-width /> Campanyes</h4>
         </nuxt-link>
       </div>
+      <div class="col-md-4">
+        <a href="https://somriure.compromis.net" target="_blank" class="home-card">
+          <h4><fa :icon="['far', 'newspaper']" fixed-width /> Generador d'El Somriure</h4>
+        </a>
+      </div>
     </div>
   </div>
 </template>

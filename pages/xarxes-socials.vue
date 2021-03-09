@@ -160,7 +160,7 @@ export default {
 
   head () {
     return {
-      title: `Xarxes socials - Manual d'estil - Compromís`
+      title: 'Xarxes socials - Manual d\'estil - Compromís'
     }
   }
 }

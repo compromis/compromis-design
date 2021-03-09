@@ -20,7 +20,7 @@ export default {
 
   head () {
     return {
-      title: `Campanyes - Manual d'estil - Compromís`
+      title: 'Campanyes - Manual d\'estil - Compromís'
     }
   }
 }

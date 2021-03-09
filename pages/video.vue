@@ -72,7 +72,7 @@ export default {
 
   head () {
     return {
-      title: `Vídeo - Manual d'estil - Compromís`
+      title: 'Vídeo - Manual d\'estil - Compromís'
     }
   }
 }
