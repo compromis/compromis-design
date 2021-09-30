@@ -239,7 +239,7 @@
           <div class="assets-list assets-sticky">
             <div class="assets-sticky-content">
               <label>Genera el logo del teu col·lectiu</label>
-              <custom-local-generator class="generator" />
+              <custom-local-generator class="generator" :municipalities="municipalities" />
 
               <label>O descarrega les plantilles en <code>.ai</code> i <code>.svg</code></label>
               <ul>
@@ -278,6 +278,11 @@ export default {
     CompromisLogo,
     LogoGrid,
     CustomLocalGenerator
+  },
+
+  async asyncData ({ $axios }) {
+    const municipalities = await $axios.$get('https://compromis.net/espai/targes/municipalities')
+    return { municipalities }
   },
 
   data () {
