@@ -1,18 +1,19 @@
 // Typography
-$font-family-sans-serif: 'Compromis', Helvetica, arial, sans-serif;
+$font-family-sans-serif: "Manrope", Helvetica, arial, sans-serif;
 
 // Colors
-$primary: #FF6720;
+$primary: #ff6720;
 $gray-darkest: #353949;
 $gray-lightest: #f8faff;
+$white: #fff;
 
 //Bootstrap Colors
-$yellow: #FFD10F;
-$orange: #F79226;
-$red: #EF404D;
-$purple: #A14A9C;
-$blue: #55A4DB;
-$green: #7FC347;
+$yellow: #ffd10f;
+$orange: #f79226;
+$red: #ef404d;
+$purple: #a14a9c;
+$blue: #55a4db;
+$green: #7fc347;
 
 $light: $gray-lightest;
 $dark: $gray-darkest;
@@ -30,16 +31,25 @@ $gray-700: mix($gray-darkest, $gray-lightest, 70%);
 $gray-800: mix($gray-darkest, $gray-lightest, 90%);
 $gray-900: $gray-darkest;
 
-$body-bg: $gray-lightest;
+$body-bg: $white;
 $body-color: $gray-darkest;
 $text-muted: $gray-600;
 
 //Gradients
 $gradient-start: #d23517;
 $gradient-end: #f39128;
-$gradient: linear-gradient(var(--gradient-orientation, 45deg), $gradient-start, $gradient-end);
-$gradient-feminista: linear-gradient(var(--gradient-orientation, 45deg), #7D3A81, #C54687);
-$gradient-lgtb: linear-gradient(180deg,
+$gradient: linear-gradient(
+  var(--gradient-orientation, 45deg),
+  $gradient-start,
+  $gradient-end
+);
+$gradient-feminista: linear-gradient(
+  var(--gradient-orientation, 45deg),
+  #7d3a81,
+  #c54687
+);
+$gradient-lgtb: linear-gradient(
+  180deg,
   $red 0%,
   $red 16.6%,
   $orange 16.6%,
@@ -51,62 +61,62 @@ $gradient-lgtb: linear-gradient(180deg,
   $blue 66.4%,
   $blue 83%,
   $purple 83%,
-  $purple 100%);
+  $purple 100%
+);
 $rotation: -5deg;
 
 //border-radius
-$border-radius: .75rem;
+$border-radius: 0.75rem;
 $card-radius: 1rem;
 $border-radius-lg: 1.5rem;
 $border-radius-xl: 5rem;
 
 // Shadows
-$default-shadow: 0 .8rem 1.7rem -.3rem rgba($gray-900, .15),
-    0 .5rem 1rem -.5rem rgba($gray-900, .2),
-    0 -.4rem 1rem -.4rem rgba($gray-900, .015);
-$raised-shadow: 0 1.25rem 2.1rem -.3rem rgba($gray-900, .15),
-    0 .9rem 1.4rem -.5rem rgba($gray-900, .2),
-    0 -.75rem 1.4rem -.4rem rgba($gray-900, .015);
-$inset-shadow: inset -2rem 0 3.1rem -1rem rgba($gray-600, .05),
-    inset -1.25rem 0 2rem -.5rem rgba($gray-600, .2),
-    inset -.75rem 0 1.5rem -.4rem rgba($gray-600, .015);
-$inset-shadow-xs: inset -2rem 0 1rem -1rem rgba($gray-400, .05),
-    inset -1.25rem 0 .75rem -.5rem rgba($gray-400, .2),
-    inset -.75rem 0 .25rem -.4rem rgba($gray-400, .015);
+$default-shadow: 0 0.8rem 1.7rem -0.3rem rgba($gray-900, 0.15),
+  0 0.5rem 1rem -0.5rem rgba($gray-900, 0.2),
+  0 -0.4rem 1rem -0.4rem rgba($gray-900, 0.015);
+$raised-shadow: 0 1.25rem 2.1rem -0.3rem rgba($gray-900, 0.15),
+  0 0.9rem 1.4rem -0.5rem rgba($gray-900, 0.2),
+  0 -0.75rem 1.4rem -0.4rem rgba($gray-900, 0.015);
+$inset-shadow: inset -2rem 0 3.1rem -1rem rgba($gray-600, 0.05),
+  inset -1.25rem 0 2rem -0.5rem rgba($gray-600, 0.2),
+  inset -0.75rem 0 1.5rem -0.4rem rgba($gray-600, 0.015);
+$inset-shadow-xs: inset -2rem 0 1rem -1rem rgba($gray-400, 0.05),
+  inset -1.25rem 0 0.75rem -0.5rem rgba($gray-400, 0.2),
+  inset -0.75rem 0 0.25rem -0.4rem rgba($gray-400, 0.015);
 
 // Navbar
-$navbar-height: 3.375rem;
+$navbar-height: 3.571rem;
 
 // Scrollbars
 @mixin scrollbar {
-    &::-webkit-scrollbar {
-        width: 1rem;
-    }
+  &::-webkit-scrollbar {
+    width: 1rem;
+  }
 
-    &::-webkit-scrollbar-thumb {
-        background-color: $gray-400;
-        border-radius: 4rem;
-        transition: .25s ease-in-out;
-        border: .25rem $gray-lightest solid;
-    }
+  &::-webkit-scrollbar-thumb {
+    background-color: $gray-400;
+    border-radius: 4rem;
+    transition: 0.25s ease-in-out;
+    border: 0.25rem $gray-lightest solid;
+  }
 
-    &::-webkit-scrollbar-thumb:hover {
-        background-color: $gray-600;
-    }
+  &::-webkit-scrollbar-thumb:hover {
+    background-color: $gray-600;
+  }
 }
 
-@mixin focus-shadow ($color) {
-  box-shadow: 0 .8rem 1.7rem -.3rem rgba($color, .15),
-    0 .5rem 1rem -.5rem rgba($color, .2),
-    0 -.4rem 1rem -.4rem rgba($color, .015),
-    0 0 0 .25rem rgba($color, .5) !important;
+@mixin focus-shadow($color) {
+  box-shadow: 0 0.8rem 1.7rem -0.3rem rgba($color, 0.15),
+    0 0.5rem 1rem -0.5rem rgba($color, 0.2),
+    0 -0.4rem 1rem -0.4rem rgba($color, 0.015), 0 0 0 0.25rem rgba($color, 0.5) !important;
 }
 
 $container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 1400px,
-  xl: 2440px
+  xl: 2440px,
 );
 
 $grid-breakpoints: (
@@ -114,10 +124,10 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 900px,
-  xl: 1500px
+  xl: 1500px,
 ) !default;
 
 // Boostrap variables and functions
-@import 'bootstrap/scss/_functions';
-@import 'bootstrap/scss/_variables';
-@import 'bootstrap/scss/_mixins';
+@import "bootstrap/scss/_functions";
+@import "bootstrap/scss/_variables";
+@import "bootstrap/scss/_mixins";

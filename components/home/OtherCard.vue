@@ -29,7 +29,7 @@
       </div>
       <div class="col-md-4">
         <a href="https://somriure.compromis.net" target="_blank" class="home-card">
-          <h4><fa :icon="['far', 'newspaper']" fixed-width /> Generador d'El Somriure</h4>
+          <h4><fa :icon="['far', 'newspaper']" fixed-width />El Somriure</h4>
         </a>
       </div>
     </div>

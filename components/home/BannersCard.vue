@@ -60,7 +60,7 @@ export default {
   a.apple-link {
     position: relative;
     font-size: 1.2rem;
-    font-weight: bold;
+    font-weight: 900;
     color: $gray-900;
     opacity: .75;
     transition: .25s ease-in-out;
@@ -112,7 +112,7 @@ export default {
       background: $white;
       color: $gray-900;
       font-size: 1.5rem;
-      font-weight: bold;
+      font-weight: 900;
       letter-spacing: -1px;
       height: 100%;
       border-radius: 1rem;

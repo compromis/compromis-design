@@ -1,23 +1,23 @@
 <template>
   <div class="page">
-    <app-nav dark nav-label="Manual d'estil" logo-label="Disseny" />
+    <app-nav inside nav-label="Manual d'estil" logo-label="Disseny" />
     <div :class="{ 'sidebar-open': sidebarOpen }" class="container-fluid">
       <div class="layout">
+        <button
+          :aria-expanded="sidebarOpen"
+          type="button"
+          aria-label="Obrir menú"
+          aria-controls="sidebar"
+          class="navbar-toggler sidebar-toggler d-block d-lg-none"
+          @click="toggleSidebar"
+        >
+          <span class="navbar-toggler-icon" />
+        </button>
         <div class="sidebar-wrapper">
           <aside class="sidebar">
             <div class="sidebar-scroll">
               <app-sidebar />
             </div>
-            <button
-              :aria-expanded="sidebarOpen"
-              type="button"
-              aria-label="Obrir menú"
-              aria-controls="sidebar"
-              class="navbar-toggler sidebar-toggler d-block d-lg-none"
-              @click="toggleSidebar"
-            >
-              <span class="navbar-toggler-icon" />
-            </button>
           </aside>
         </div>
         <div class="content-wrapper">
@@ -81,43 +81,28 @@ export default {
   }
 
   .sidebar-wrapper {
-    width: 25%;
-    max-width: 450px;
+    display: flex;
+    width: 23rem;
+    border-right: 1px solid $gray-200;
     flex-shrink: 0;
   }
 
   .sidebar {
-    position: sticky;
-    top: $navbar-height;
-    left: 0;
-    right: 0;
-    height: calc(100vh - 3.375rem);
     overflow: visible;
     transition: left .6s cubic-bezier(.56,0,.4,1.2), width .6s cubic-bezier(.56,0,.4,1.2);
-
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 999em;
-      height: 100%;
-      background: $gray-lightest;
-      z-index: -1;
-      box-shadow: $inset-shadow;
-    }
+    padding-top: 15vh;
 
     &-scroll {
-      height: calc(100vh - 3.375rem);
-      overflow-y: scroll;
-      padding-top: 15vh;
-      padding-left: 6rem;
-      margin-left: -2rem;
-      margin-right: 2rem;
+      top: calc(.75rem + #{$navbar-height});
+      position: sticky;
+      max-height: calc(100vh - #{$navbar-height});
+      overflow-y: auto;
+      padding-left: .25rem;
       @include scrollbar;
     }
 
     &-toggler {
+      z-index: 25;
       position: fixed;
       bottom: 2rem;
       right: 1rem;
@@ -126,7 +111,6 @@ export default {
       border-radius: 50%;
       height: 4rem;
       width: 4rem;
-      box-shadow: $default-shadow;
     }
   }
 
@@ -136,6 +120,11 @@ export default {
     padding-top: 15vh;
     left: 0;
     transition: .6s cubic-bezier(.56,0,.4,1.2);
+
+    &-wrapper {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
   }
 
   @include media-breakpoint-down(lg) {
@@ -147,10 +136,6 @@ export default {
       padding-left: 2rem;
       padding-right: 2rem;
     }
-
-    .sidebar-scroll {
-      padding-left: 3rem;
-    }
   }
 
   @include media-breakpoint-down(md) {
@@ -159,33 +144,34 @@ export default {
     }
 
     .sidebar {
-      position: fixed;
-      width: 80vw;
-      left: -80vw;
-      z-index: 20;
-      padding: 1rem;
+      padding-top: 0;
 
-      &::before {
-        box-shadow: $inset-shadow-xs;
-      }
-
-      &-open {
-        .sidebar {
-          left: 0;
-          width: 70vw;
-        }
-
-        .content {
-          left: 70vw;
-          opacity: .5;
-        }
+      &-wrapper {
+        position: fixed;
+        width: 75vw;
+        top: $navbar-height;
+        left: 0;
+        bottom: 0;
+        z-index: 20;
+        padding-left: 1rem;
+        transform: translateX(-100%);
+        transition: .6s cubic-bezier(.56,0,.4,1.2);
       }
 
       &-scroll {
-        margin-right: 0;
-        padding-top: 0;
-        padding-left: 2rem;
-        padding-bottom: 3rem;
+        top: 0;
+        padding-top: .75rem;
+      }
+
+      &-open {
+        .sidebar-wrapper {
+          transform: translateX(0);
+        }
+
+        .content {
+          left: calc(75vw + 1rem);
+          opacity: .5;
+        }
       }
     }
 

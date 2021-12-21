@@ -138,7 +138,7 @@ export default {
     }
 
     span {
-      font-weight: bold;
+      font-weight: 900;
       grid-row: span 2;
       font-size: .75rem;
     }
@@ -153,7 +153,7 @@ export default {
     position: relative;
     color: $white;
     font-size: 1.5rem;
-    font-weight: bold;
+    font-weight: 900;
     letter-spacing: -1px;
     width: 15rem;
     height: 15rem;

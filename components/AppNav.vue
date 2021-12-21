@@ -1,21 +1,18 @@
 <template>
-  <b-navbar :class="{ 'navbar': true, 'navbar--dark': dark }" :toggleable="true" :variant="dark ? 'dark' : 'light'" fixed="top">
+  <b-navbar :class="['navbar', {'navbar-inside' : inside}]" :toggleable="true" fixed="top">
     <div class="container-fluid">
       <nuxt-link to="/" class="logo-link">
-        <compromis-logo :mono="dark" class="logo" />
+        <compromis-logo />
       </nuxt-link>
       <div v-if="logoLabel" class="nav-label logo-label">
         {{ logoLabel }}
-      </div>
-      <div v-if="navLabel" class="nav-label app-label">
-        {{ navLabel }}
       </div>
     </div>
   </b-navbar>
 </template>
 
 <script>
-import CompromisLogo from './logos/CompromisLogo'
+import CompromisLogo from '@compromis/blobby/components/logos/CompromisLogo.vue'
 
 export default {
   name: 'AppNav',
@@ -25,10 +22,6 @@ export default {
   },
 
   props: {
-    dark: {
-      type: Boolean,
-      default: false
-    },
     navLabel: {
       type: String,
       default: ''
@@ -36,6 +29,10 @@ export default {
     logoLabel: {
       type: String,
       default: ''
+    },
+    inside: {
+      type: Boolean,
+      default: false
     }
   }
 }
@@ -50,13 +47,8 @@ export default {
     top: 0;
     left: 0;
     right: 0;
-    background-color: $white !important;
     padding: .75rem 0;
     transition: .25s ease-in-out;
-
-    & > .container-fluid {
-      padding: 0 5rem;
-    }
 
     .logo {
       height: 28px;
@@ -73,7 +65,7 @@ export default {
       letter-spacing: -.3px;
       line-height: 1;
       white-space: nowrap;
-      color: $gray-700;
+      color: $white;
     }
 
     .logo-label {
@@ -85,15 +77,13 @@ export default {
       margin-left: auto;
     }
 
-    &--dark {
-      background-color: $gray-900 !important;
+    &-inside {
+      background: $white;
+      border-bottom: 1px solid $gray-200;
 
-      .app-label, .nav-label {
-        color: $white;
+      .nav-label {
+        color: $gray-700;
       }
-     .navbar-toggler-icon::before, .navbar-toggler-icon::after {
-       background-color: $white;
-     }
     }
 
     &-toggler {
@@ -137,6 +127,13 @@ export default {
 
   @include media-breakpoint-down(lg) {
     .navbar {
+      background: white;
+      border-bottom: $gray-200;
+
+      &-label {
+        color: $gray-700;
+      }
+
       & > .container-fluid {
         padding: 0 2rem;
       }
