@@ -158,7 +158,7 @@ export default {
       width: fit-content;
       display: flex;
       color: $gray-800;
-      padding: .5rem 1rem;
+      padding: .5rem 1rem .5rem .75rem;
       font-size: 1.25rem;
       font-weight: bold;
       transition: .3s ease-in-out;

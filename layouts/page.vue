@@ -94,14 +94,14 @@ export default {
     flex-grow: 1;
 
     &-scroll {
-      top: calc(.75rem + #{$navbar-height});
+      top: calc(.25rem + #{$navbar-height});
       position: sticky;
       max-height: calc(100vh - #{$navbar-height});
       overflow-y: auto;
-      @include scrollbar;
       padding: 0.25rem;
       margin-left: -1rem;
       margin-right: 1rem;
+      @include scrollbar;
     }
 
     &-toggler {
