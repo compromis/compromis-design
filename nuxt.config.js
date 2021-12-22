@@ -46,7 +46,8 @@ export default {
   */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    '@nuxtjs/style-resources'
   ],
   /*
   ** Nuxt.js modules
@@ -100,5 +101,9 @@ export default {
     ],
     bootstrapCSS: false,
     bootstrapVueCSS: false
+  },
+
+  styleResources: {
+    scss: '@compromis/blobby/scss/_variables.scss'
   }
 }

@@ -155,13 +155,15 @@ export default {
     }
 
     a {
+      width: fit-content;
       display: flex;
       color: $gray-800;
-      padding: .5rem 0;
+      padding: .5rem 1rem;
       font-size: 1.25rem;
       font-weight: bold;
-      transition: .3s cubic-bezier(.56,0,.4,1.2);
+      transition: .3s ease-in-out;
       align-items: center;
+      border-radius: $border-radius-sm;
 
       span {
         transition: border .3s cubic-bezier(.56,0,.4,1.2);
@@ -175,11 +177,6 @@ export default {
 
       &.nuxt-link-active {
         position: relative;
-        color: $primary;
-
-        &:hover span {
-          border-color: $primary;
-        }
 
         .svg-inline--fa, .icon-careta {
          transform: rotate(-10deg);
@@ -188,18 +185,21 @@ export default {
 
       &:hover {
         text-decoration: none;
-
-        span {
-          border-color: $gray-800;
-        }
+        background: var(--gray-100);
 
         .svg-inline--fa, .icon-careta {
          transform: rotate(-10deg);
         }
       }
+
+      &:focus {
+        position: relative;
+        z-index: 1;
+      }
     }
 
     .nav {
+      position: static;
       padding-left: 2.25rem;
       margin-bottom: 1.5rem;
       flex-direction: column;
@@ -207,11 +207,13 @@ export default {
 
       a {
         font-size: 1rem;
-        padding: 0;
+        padding: 0 0.5rem;
         font-weight: normal;
+        border-radius: $border-radius-xs;
+        margin-left: 0.5rem;
 
         &:hover {
-          text-decoration: underline;
+          background: var(--gray-100);
         }
       }
 

@@ -1,11 +1,13 @@
 <template>
   <b-navbar :class="['navbar', {'navbar-inside' : inside}]" :toggleable="true" fixed="top">
     <div class="container-fluid">
-      <nuxt-link to="/" class="logo-link">
-        <compromis-logo />
-      </nuxt-link>
-      <div v-if="logoLabel" class="nav-label logo-label">
-        {{ logoLabel }}
+      <div class="nav-logo">
+        <nuxt-link to="/" class="nav-logo-compromis" aria-label="compromis">
+          <compromis-logo />
+        </nuxt-link>
+        <div v-if="logoLabel" class="nav-logo-append ms-2">
+          {{ logoLabel }}
+        </div>
       </div>
     </div>
   </b-navbar>
@@ -49,42 +51,8 @@ export default {
     right: 0;
     padding: .75rem 0;
     transition: .25s ease-in-out;
-
-    .logo {
-      height: 28px;
-
-      &-link {
-        color: $white;
-      }
-    }
-
-    .nav-label {
-      display: flex;
-      align-items: center;
-      font-size: 1.25rem;
-      letter-spacing: -.3px;
-      line-height: 1;
-      white-space: nowrap;
-      color: $white;
-    }
-
-    .logo-label {
-      padding: .3rem .75rem;
-      color: $gray-700;
-    }
-
-    .app-label {
-      margin-left: auto;
-    }
-
-    &-inside {
-      background: $white;
-      border-bottom: 1px solid $gray-200;
-
-      .nav-label {
-        color: $gray-700;
-      }
-    }
+    border-bottom: 1px solid var(--gray-200);
+    background: var(--white);
 
     &-toggler {
       border: 0;
@@ -127,16 +95,8 @@ export default {
 
   @include media-breakpoint-down(lg) {
     .navbar {
-      background: white;
-      border-bottom: $gray-200;
-
-      &-label {
-        color: $gray-700;
-      }
-
-      & > .container-fluid {
-        padding: 0 2rem;
-      }
+      background: var(--white);
+      border-bottom: var(--gray-200);
     }
   }
 
@@ -145,22 +105,12 @@ export default {
       z-index: 100;
       padding: .75rem 0;
 
-      & > .container-fluid {
-        padding: 0 1rem;
-      }
-
-      .logo-label {
+      .nav-logo-append {
         display: none !important;
       }
 
       .app-label {
         margin-left: .5rem;
-      }
-
-      .logo-link {
-        display: inline-block;
-        width: 30px;
-        overflow: hidden;
       }
     }
   }

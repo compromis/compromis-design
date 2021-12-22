@@ -91,14 +91,17 @@ export default {
     overflow: visible;
     transition: left .6s cubic-bezier(.56,0,.4,1.2), width .6s cubic-bezier(.56,0,.4,1.2);
     padding-top: 15vh;
+    flex-grow: 1;
 
     &-scroll {
       top: calc(.75rem + #{$navbar-height});
       position: sticky;
       max-height: calc(100vh - #{$navbar-height});
       overflow-y: auto;
-      padding-left: .25rem;
       @include scrollbar;
+      padding: 0.25rem;
+      margin-left: -1rem;
+      margin-right: 1rem;
     }
 
     &-toggler {
