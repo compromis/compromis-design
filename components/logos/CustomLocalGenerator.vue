@@ -1,38 +1,54 @@
 <template>
-  <div class="input-group generator">
-    <input
-      id="localName"
-      :value="name"
-      type="text"
-      class="form-control form-control-lg"
-      placeholder="Alacant"
-      list="municipalities"
-      @input="updateName"
-      @keypress="preventTyping"
-      @keydown.delete="resetTyping"
-      @keypress.enter="download('H')"
-    >
-    <div class="input-group-append">
-      <b-dropdown size="lg" text="Descarrega">
-        <b-dropdown-item v-if="!canDownload" disabled>
+  <div class="input-append generator">
+    <div class="input-field input-default input-lg input-border-supermuted">
+      <input
+        id="localName"
+        class="input w-100"
+        :value="name"
+        placeholder="Alacant"
+        list="municipalities"
+        @input="updateName"
+        @keypress="preventTyping"
+        @keydown.delete="resetTyping"
+        @keypress.enter="download('H')"
+      >
+    </div>
+    <b-dropdown opens="click">
+      <template #toggler>
+        <b-button variant="supermuted" size="lg" class="input-append-last text-nowrap">
+          Genera
+          <fa :icon="['far', 'chevron-down']" class="ms-2" />
+        </b-button>
+      </template>
+      <b-card>
+        <b-card-section v-if="!canDownload" border-bottom class="text-muted">
           Has d'escriure un nom vàlid d'un <br>
           col·lectiu local o comarcal de Compromís
-        </b-dropdown-item>
-        <b-dropdown-divider v-if="!canDownload" />
-        <b-dropdown-item :disabled="!canDownload" @click="download('H', 'svg')">
-          Horitzontal <span class="text-muted">(.svg)</span>
-        </b-dropdown-item>
-        <b-dropdown-item :disabled="!canDownload" @click="download('H', 'png')">
-          Horitzontal <span class="text-muted">(.png)</span>
-        </b-dropdown-item>
-        <b-dropdown-item :disabled="!canDownload" @click="download('V', 'svg')">
-          Comprimida <span class="text-muted">(.svg)</span>
-        </b-dropdown-item>
-        <b-dropdown-item :disabled="!canDownload" @click="download('V', 'png')">
-          Comprimida <span class="text-muted">(.png)</span>
-        </b-dropdown-item>
-      </b-dropdown>
-    </div>
+        </b-card-section>
+        <b-card-list menu>
+          <li>
+            <button :disabled="!canDownload" class="text-nowrap" @click="download('H', 'svg')">
+              Horitzontal <span class="text-muted">(.svg)</span>
+            </button>
+          </li>
+          <li>
+            <button :disabled="!canDownload" class="text-nowrap" @click="download('H', 'svg')">
+              Horitzontal <span class="text-muted">(.png)</span>
+            </button>
+          </li>
+          <li>
+            <button :disabled="!canDownload" class="text-nowrap" @click="download('H', 'svg')">
+              Comprimida <span class="text-muted">(.svg)</span>
+            </button>
+          </li>
+          <li>
+            <button :disabled="!canDownload" class="text-nowrap" @click="download('H', 'svg')">
+              Comprimida <span class="text-muted">(.png)</span>
+            </button>
+          </li>
+        </b-card-list>
+      </b-card>
+    </b-dropdown>
     <datalist id="municipalities">
       <option v-for="(municipality, i) in municipalities" :key="i">
         {{ municipality }}
@@ -43,6 +59,7 @@
 
 <script>
 import utf8 from 'utf8'
+import BDropdown from '@compromis/blobby/components/dropdown/BDropdown.vue'
 import localHorizontalOneLiner from './custom-local/local-horizontal-oneliner'
 import localHorizontalTwoLiner from './custom-local/local-horizontal-twoliner'
 import localVerticalOneLiner from './custom-local/local-vertical-oneliner'
@@ -50,6 +67,10 @@ import localVerticalTwoLiner from './custom-local/local-vertical-twoliner'
 
 export default {
   name: 'CustomLocalGenerator',
+
+  components: {
+    BDropdown
+  },
 
   props: {
     municipalities: {
@@ -163,7 +184,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-
-</style>
