@@ -6,9 +6,9 @@
       (excepte en casos excepcionals) i usar els dos pesos (Medium i Extra Bold) com s'explica a continuació.
     </p>
     <p>
-      <c-button variant="outline-primary" size="lg" href="/assets/fonts/Manrope.zip">
+      <b-button variant="primary" size="lg" outline has-shadow href="/assets/fonts/Manrope.zip">
         <fa :icon="['far', 'arrow-circle-down']" /> Descarrega Manrope
-      </c-button>
+      </b-button>
     </p>
     <div class="row mt-8">
       <div class="col-xl-8">

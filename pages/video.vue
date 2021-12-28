@@ -5,9 +5,17 @@
       En aquesta secció podeu descarregar una varietat de recursos per a la composició de vídeos de Compromís,
       com la outro amb el logo o exemples de títols.
     </p>
-    <c-button variant="outline-primary" size="lg" href="https://comprom.is/materialvideo" target="_blank" rel="noopener noreferrer">
+    <b-button
+      variant="primary"
+      size="lg"
+      outline
+      has-shadow
+      href="https://comprom.is/materialvideo"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       <fa :icon="['far', 'photo-video']" /> Recursos per a vídeo
-    </c-button>
+    </b-button>
 
     <div class="row">
       <div class="col-md-8">
@@ -16,9 +24,16 @@
         </h2>
         <p>Per a fer-vos una idea de com podeu montar vídeos (esquema, estètica, etc.), consulteu la secció de Vídeos del Facebook de Compromís.</p>
 
-        <c-button variant="outline-primary" href="https://www.facebook.com/pg/coaliciocompromis/videos" target="_blank">
+        <b-button
+          variant="primary"
+          size="lg"
+          outline
+          has-shadow
+          href="https://www.facebook.com/pg/coaliciocompromis/videos"
+          target="_blank"
+        >
           <fa :icon="['far', 'play']" /> Vídeos de Compromís
-        </c-button>
+        </b-button>
 
         <h3>Vídeos d'intervencions o entrevistes</h3>
         <p>

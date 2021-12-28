@@ -5,10 +5,18 @@
       A aquesta secció podeu descarregar tot el material relacionat amb les diferents campanyes puntuals.
     </p>
     <p>
-      <c-button variant="outline-primary" size="lg" href="https://compromis.net/espai/targes/campanyes" target="_blank" rel="noopener noreferrer">
+      <b-button
+        variant="primary"
+        size="lg"
+        outline
+        has-shadow
+        href="https://compromis.net/espai/targes/campanyes"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <fa :icon="['far', 'megaphone']" /> Repositori de campanyes
-      </c-button>
-      <small class="text-muted ml-2"><fa :icon="['far', 'lock-alt']" /></small>
+      </b-button>
+      <small class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></small>
     </p>
   </div>
 </template>

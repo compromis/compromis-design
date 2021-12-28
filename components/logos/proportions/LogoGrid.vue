@@ -1,14 +1,14 @@
 <template>
   <figure>
     <div class="controls">
-      <c-button size="sm" class="toggle-button" @click="showGrid = !showGrid">
+      <b-button size="sm" class="toggle-button" @click="showGrid = !showGrid">
         <span v-if="showGrid">
           <fa :icon="['far', 'eye']" /> Guies
         </span>
         <span v-else>
           <fa :icon="['far', 'eye-slash']" /> Guies
         </span>
-      </c-button>
+      </b-button>
     </div>
     <!-- eslint-disable-next-line -->
     <component :is="logo" :grid="showGrid" />

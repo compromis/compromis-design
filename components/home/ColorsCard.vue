@@ -1,21 +1,28 @@
 <template>
   <div>
     <h3>Colors</h3>
-    <div class="home-card">
-      <div class="home-card-icon color-swatches">
+    <b-card size="lg">
+      <b-card-section class="color-swatches">
         <color-swatch :hex="['#d23517','#f39128']" name="gradient" mini />
         <color-swatch name="orange" hex="#FF6720" mini />
         <color-swatch name="gray-dark" hex="#353949" mini />
         <color-swatch name="gray-med" hex="#979AA4" mini />
         <color-swatch name="gray-light" hex="#EEF0F6" dark mini />
         <color-swatch name="white" hex="#FFFFFF" dark mini />
-      </div>
-      <div class="home-card-buttons">
-        <nuxt-link to="/colors" class="btn btn-outline-primary btn-lg">
+      </b-card-section>
+      <b-card-section border-top>
+        <b-button
+          to="/colors"
+          variant="primary"
+          size="lg"
+          has-shadow
+          outline
+          class="me-2"
+        >
           <span>Guies d'ús</span>
-        </nuxt-link>
-      </div>
-    </div>
+        </b-button>
+      </b-card-section>
+    </b-card>
   </div>
 </template>
 

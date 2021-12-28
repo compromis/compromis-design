@@ -14,10 +14,17 @@
       </div>
       <div class="col-md-4 d-flex align-items-end mt-4 mt-xl-0">
         <p class="mb-0">
-          <c-button href="https://compromis.net/espai/targes/?template=social" variant="outline-primary" size="lg" target="_blank">
+          <b-button
+            variant="primary"
+            size="lg"
+            outline
+            has-shadow
+            href="https://compromis.net/espai/targes/?template=social"
+            target="_blank"
+          >
             <fa :icon="['far', 'user-circle']" /> Crea una foto de perfil
-          </c-button>
-          <small class="text-muted ml-2"><fa :icon="['far', 'lock-alt']" /></small>
+          </b-button>
+          <small class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></small>
         </p>
       </div>
     </div>
@@ -93,10 +100,17 @@
       </div>
       <div class="col-md-4 d-flex align-items-end mt-4 mt-xl-0">
         <p>
-          <c-button href="https://compromis.net/espai/targes" variant="outline-primary" size="lg" target="_blank">
+          <b-button
+            variant="primary"
+            size="lg"
+            outline
+            has-shadow
+            href="https://compromis.net/espai/targes"
+            target="_blank"
+          >
             <fa :icon="['far', 'send-backward']" /> Generador de targes
-          </c-button>
-          <small class="text-muted ml-2"><fa :icon="['far', 'lock-alt']" /></small>
+          </b-button>
+          <small class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></small>
         </p>
       </div>
     </div>
@@ -112,10 +126,18 @@
       </div>
       <div class="col-md-4 d-flex align-items-end mt-4 mt-xl-0">
         <p>
-          <c-button href="https://compromis.net/espai/targes" variant="outline-primary" size="lg" target="_blank" disabled>
+          <b-button
+            variant="primary"
+            size="lg"
+            outline
+            has-shadow
+            href="https://compromis.net/espai/targes"
+            target="_blank"
+            disabled
+          >
             <fa :icon="['far', 'book']" /> Manual de Xarxes
-          </c-button>
-          <small class="text-muted ml-2"><fa :icon="['far', 'lock-alt']" /> Properament</small>
+          </b-button>
+          <small class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /> Properament</small>
         </p>
       </div>
     </div>
@@ -143,10 +165,17 @@
       </div>
       <div class="col-md-4 d-flex align-items-end mt-4 mt-xl-0">
         <p class="mb-0">
-          <c-button href="https://comprom.is/crea" variant="outline-primary" size="lg" target="_blank">
+          <b-button
+            variant="primary"
+            size="lg"
+            outline
+            has-shadow
+            href="https://comprom.is/crea"
+            target="_blank"
+          >
             <fa :icon="['far', 'link']" /> Acurtador d'enllaços
-          </c-button>
-          <small class="text-muted ml-2"><fa :icon="['far', 'lock-alt']" /></small>
+          </b-button>
+          <small class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></small>
         </p>
       </div>
     </div>

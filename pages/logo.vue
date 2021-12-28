@@ -20,9 +20,9 @@
           <logo-grid :logo="logos.Logo" />
         </div>
         <div class="col-lg-4 d-flex align-items-end mt-4 mt-xl-0">
-          <c-button href="/assets/logo/logo.zip" variant="outline-primary" size="lg">
+          <b-button href="/assets/logo/logo.zip" variant="primary" outline has-shadow size="lg">
             <fa :icon="['far', 'arrow-circle-down']" /> Descarrega logo
-          </c-button>
+          </b-button>
         </div>
       </div>
     </section>

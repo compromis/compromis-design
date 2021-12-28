@@ -1,8 +1,8 @@
 <template>
   <div>
     <h3>Logo</h3>
-    <div class="home-card home-card--logo">
-      <div class="home-card-icon">
+    <b-card size="lg" content-class="logo-card">
+      <b-card-section class="logo-preview-section">
         <div class="compromis-logo-preview">
           <compromis-logo />
           <div v-if="!twoLiner" class="local-logo-preview">
@@ -13,25 +13,30 @@
             <span>{{ twoLines.line2 }}</span>
           </div>
         </div>
-      </div>
-      <div class="home-card-buttons">
-        <div class="division">
-          <label>Logo de Compromís</label>
-          <div>
-            <nuxt-link to="/logo" class="btn btn-outline-primary btn-lg">
-              <span>Guies d'ús</span>
-            </nuxt-link>
-            <a href="/assets/logo/logo.zip" class="btn btn-no-shadow btn-lg">
-              <fa :icon="['far', 'arrow-circle-down']" /> Logo
-            </a>
-          </div>
+      </b-card-section>
+      <b-card-section border-top border-right>
+        <label>Logo de Compromís</label>
+        <div class="d-flex">
+          <b-button
+            to="/logo"
+            variant="primary"
+            size="lg"
+            has-shadow
+            outline
+            class="me-2"
+          >
+            <span>Guies d'ús</span>
+          </b-button>
+          <b-button href="/assets/logo/logo.zip" variant="supermuted" size="lg">
+            <fa :icon="['far', 'arrow-circle-down']" /> Logo
+          </b-button>
         </div>
-        <div>
-          <label for="localName">Genera el logo del teu col·lectiu</label>
-          <custom-local-generator :municipalities="municipalities" @name-change="(name) => localName = name" />
-        </div>
-      </div>
-    </div>
+      </b-card-section>
+      <b-card-section border-top>
+        <label for="localName">Genera el logo del teu col·lectiu</label>
+        <custom-local-generator :municipalities="municipalities" @name-change="(name) => localName = name" />
+      </b-card-section>
+    </b-card>
   </div>
 </template>
 
@@ -75,6 +80,28 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+@import '../../sass/variables';
+  .logo-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .logo-preview-section {
+    grid-column: span 2;
+  }
+
+  @include media-breakpoint-down(md) {
+    .logo-card {
+      grid-template-columns: 1fr;
+    }
+
+    .logo-preview-section {
+      grid-column: span 1;
+    }
+  }
+</style>
 
 <style lang="scss" scoped>
 @import '../../sass/variables';

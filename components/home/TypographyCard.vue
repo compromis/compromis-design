@@ -1,8 +1,8 @@
 <template>
   <div>
     <h3>Tipografia</h3>
-    <div class="home-card">
-      <div class="home-card-icon text-left">
+    <b-card size="lg">
+      <b-card-section>
         <h5 class="font-weight-bold mb-2" style="font-size: 2rem;">
           Manrope ExtraBold
         </h5>
@@ -15,16 +15,23 @@
         <div class="text-muted">
           Setze jutges d'un jutjat mengen fetge d'un penjat. Si el penjat es despenja, es menja els setze fetges dels jutges del jutjat que l'han penjat.
         </div>
-      </div>
-      <div class="home-card-buttons">
-        <nuxt-link to="/tipografia" class="btn btn-outline-primary btn-lg">
+      </b-card-section>
+      <b-card-section border-top>
+        <b-button
+          to="/tipografia"
+          variant="primary"
+          size="lg"
+          has-shadow
+          outline
+          class="me-2"
+        >
           <span>Guies d'ús</span>
-        </nuxt-link>
-        <a href="/assets/fonts/Manrope.zip" class="btn btn-no-shadow btn-lg">
+        </b-button>
+        <b-button href="/assets/fonts/Manrope.zip" variant="supermuted" size="lg">
           <fa :icon="['far', 'arrow-circle-down']" /> Manrope
-        </a>
-      </div>
-    </div>
+        </b-button>
+      </b-card-section>
+    </b-card>
   </div>
 </template>
 
