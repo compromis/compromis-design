@@ -84,6 +84,11 @@ export default {
         }
       }
     }
+
+    &-inside {
+      background: var(--white);
+      border-bottom: 1px var(--gray-200) solid;
+    }
   }
 
   @include media-breakpoint-down(lg) {

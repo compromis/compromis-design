@@ -1,4 +1,6 @@
-import CButton from '@/components/ui/CButton.vue'
 import Vue from 'vue'
+import { BNav, BNavItem, VBScrollspyPlugin } from 'bootstrap-vue'
 
-Vue.component('c-button', CButton)
+Vue.component('b-nav', BNav)
+Vue.component('b-nav-item', BNavItem)
+Vue.use(VBScrollspyPlugin)
