@@ -24,15 +24,7 @@
   </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style lang="scss" scoped>
-@import '../../sass/variables';
-
 .other-section-grid {
   padding-bottom: 3rem;
   display: grid;

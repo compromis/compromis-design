@@ -89,15 +89,13 @@ export default {
 
   head () {
     return {
-      title: 'Colors - Manual d\'estil - Compromís'
+      title: "Colors - Manual d'estil - Compromís"
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-@import '../sass/variables';
-
 .colors {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));

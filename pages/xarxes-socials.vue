@@ -13,7 +13,7 @@
         </figure>
       </div>
       <div class="col-md-4 d-flex align-items-end mt-4 mt-xl-0">
-        <p class="mb-0">
+        <div class="d-flex align-items-center">
           <b-button
             variant="primary"
             size="lg"
@@ -24,8 +24,8 @@
           >
             <fa :icon="['far', 'user-circle']" /> Crea una foto de perfil
           </b-button>
-          <small class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></small>
-        </p>
+          <span class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></span>
+        </div>
       </div>
     </div>
 
@@ -99,7 +99,7 @@
         </ul>
       </div>
       <div class="col-md-4 d-flex align-items-end mt-4 mt-xl-0">
-        <p>
+        <div class="d-flex align-items-center">
           <b-button
             variant="primary"
             size="lg"
@@ -110,8 +110,8 @@
           >
             <fa :icon="['far', 'send-backward']" /> Generador de targes
           </b-button>
-          <small class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></small>
-        </p>
+          <span class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></span>
+        </div>
       </div>
     </div>
 
@@ -125,7 +125,7 @@
         </p>
       </div>
       <div class="col-md-4 d-flex align-items-end mt-4 mt-xl-0">
-        <p>
+        <div class="d-flex align-items-center">
           <b-button
             variant="primary"
             size="lg"
@@ -137,8 +137,8 @@
           >
             <fa :icon="['far', 'book']" /> Manual de Xarxes
           </b-button>
-          <small class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /> Properament</small>
-        </p>
+          <span class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /> Properament</span>
+        </div>
       </div>
     </div>
 
@@ -164,7 +164,7 @@
         </figure>
       </div>
       <div class="col-md-4 d-flex align-items-end mt-4 mt-xl-0">
-        <p class="mb-0">
+        <div class="d-flex align-items-center">
           <b-button
             variant="primary"
             size="lg"
@@ -175,8 +175,8 @@
           >
             <fa :icon="['far', 'link']" /> Acurtador d'enllaços
           </b-button>
-          <small class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></small>
-        </p>
+          <span class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></span>
+        </div>
       </div>
     </div>
   </div>
@@ -189,12 +189,8 @@ export default {
 
   head () {
     return {
-      title: 'Xarxes socials - Manual d\'estil - Compromís'
+      title: "Xarxes socials - Manual d'estil - Compromís"
     }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

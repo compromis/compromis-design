@@ -274,6 +274,7 @@ import CustomLocalGenerator from '@/components/logos/CustomLocalGenerator.vue'
 
 export default {
   layout: 'page',
+
   components: {
     CompromisLogo,
     LogoGrid,
@@ -303,7 +304,7 @@ export default {
 
   head () {
     return {
-      title: 'Logo - Manual d\'estil - Compromís'
+      title: "Logo - Manual d'estil - Compromís"
     }
   },
 
@@ -312,7 +313,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../sass/variables";
 .figure-error {
   img {
     height: 100px;

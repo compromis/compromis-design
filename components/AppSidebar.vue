@@ -145,8 +145,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '../sass/variables';
-
   .menu {
     ul {
       list-style: none;

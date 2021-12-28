@@ -55,12 +55,8 @@ export default {
 
   head () {
     return {
-      title: 'Fotografia - Manual d\'estil - Compromís'
+      title: "Fotografia - Manual d'estil - Compromís"
     }
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

@@ -28,8 +28,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import "../sass/variables";
-
   .blobs {
     position: fixed;
     top: 0;
@@ -42,7 +40,7 @@ export default {
     .blob {
       position: absolute;
       border-radius: 5rem;
-      background: linear-gradient(45deg, $gradient-start, $gradient-end);
+      background: linear-gradient(45deg, $gradient-primary-start, $gradient-primary-end);
       width: 50rem;
       height: 50rem;
       animation-name: blob1;

@@ -481,7 +481,7 @@ export default {
 
   head () {
     return {
-      title: 'Material imprès - Manual d\'estil - Compromís'
+      title: "Material imprès - Manual d'estil - Compromís"
     }
   }
 }

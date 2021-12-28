@@ -37,8 +37,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  @import '../../sass/variables';
-
   .color-swatches {
     display: grid;
     grid-template-columns: repeat(3, auto);

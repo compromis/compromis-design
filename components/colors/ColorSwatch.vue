@@ -104,8 +104,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import '../../sass/variables';
-
 .color {
   display: grid;
   grid-template-columns: 15rem 1fr;
@@ -159,7 +157,7 @@ export default {
     height: 15rem;
     border-width: 0px;
     border-radius: 1rem;
-    box-shadow: $default-shadow;
+    box-shadow: $shadow-default;
     transition: .2s ease-in-out;
 
     &-text {
@@ -168,7 +166,7 @@ export default {
     }
 
     &:hover {
-      box-shadow: $raised-shadow;
+      box-shadow: $shadow-default;
       transform: rotate($rotation) scale(1.05);
       text-decoration: none;
 
@@ -177,7 +175,7 @@ export default {
         color: $white;
 
         &-dark {
-          color: $gray-darkest;
+          color: $gray-900;
         }
       }
     }
@@ -201,7 +199,7 @@ export default {
     }
 
     &-gray-dark {
-      background: $gray-darkest;
+      background: $gray-900;
     }
 
     &-gray-med {

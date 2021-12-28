@@ -65,15 +65,13 @@ export default {
 
   head () {
     return {
-      title: 'Tipografia - Manual d\'estil - Compromís'
+      title: "Tipografia - Manual d'estil - Compromís"
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  @import "../sass/variables";
-
   .mt-8 {
     margin-top: 5rem;
   }

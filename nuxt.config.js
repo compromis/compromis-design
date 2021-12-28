@@ -102,6 +102,13 @@ export default {
   },
 
   styleResources: {
-    scss: '@compromis/blobby/scss/_variables.scss'
+    scss: [
+      './sass/_variables.scss',
+      '@compromis/blobby/scss/_variables.scss',
+      '@compromis/blobby/scss/_mixins.scss',
+      'bootstrap/scss/_functions.scss',
+      'bootstrap/scss/_variables.scss',
+      'bootstrap/scss/_mixins.scss'
+    ]
   }
 }

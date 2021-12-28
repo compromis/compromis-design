@@ -82,7 +82,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../../sass/variables';
   .logo-card {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -104,8 +103,6 @@ export default {
 </style>
 
 <style lang="scss" scoped>
-@import '../../sass/variables';
-
 .compromis-logo-preview {
   display: flex;
   justify-content: center;

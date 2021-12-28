@@ -87,15 +87,13 @@ export default {
 
   head () {
     return {
-      title: 'Vídeo - Manual d\'estil - Compromís'
+      title: "Vídeo - Manual d'estil - Compromís"
     }
   }
 }
 </script>
 
 <style lang="scss" scoped>
-  @import '../sass/variables';
-
   .embed-responsive {
     max-width: 400px;
     overflow: hidden;

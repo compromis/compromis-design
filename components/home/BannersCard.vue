@@ -48,15 +48,7 @@
   </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style lang="scss" scoped>
-  @import '../../sass/variables';
-
   a.apple-link {
     position: relative;
     font-size: 1.2rem;
@@ -116,7 +108,7 @@ export default {
       letter-spacing: -1px;
       height: 100%;
       border-radius: 1rem;
-      box-shadow: $default-shadow;
+      box-shadow: $shadow-default;
       transition: .2s ease-in-out;
 
       &::after {
@@ -126,11 +118,11 @@ export default {
       }
 
       &:hover {
-        box-shadow: $raised-shadow;
+        box-shadow: $shadow-raised;
         transform: rotate($rotation) scale(1.05);
 
         .template-item-name {
-          background: linear-gradient(45deg, $gradient-start, $gradient-end);
+          background: linear-gradient(45deg, $gradient-primary-start, $gradient-primary-end);
           background-clip: text;
           -webkit-background-clip: text;
           -webkit-text-fill-color: transparent;
