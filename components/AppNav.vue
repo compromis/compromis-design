@@ -14,14 +14,8 @@
 </template>
 
 <script>
-import CompromisLogo from '@compromis/blobby/components/logos/CompromisLogo.vue'
-
 export default {
   name: 'AppNav',
-
-  components: {
-    CompromisLogo
-  },
 
   props: {
     navLabel: {
