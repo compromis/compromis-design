@@ -38,13 +38,16 @@ export default {
     inside: {
       type: Boolean,
       default: false
+    },
+    sidebarOpen: {
+      type: Boolean,
+      default: false
     }
   }
 }
 </script>
 
 <style lang="scss">
-  @import '../sass/variables';
   @import "sass-burger/burger";
 
   .navbar {
