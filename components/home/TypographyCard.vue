@@ -16,7 +16,7 @@
           Setze jutges d'un jutjat mengen fetge d'un penjat. Si el penjat es despenja, es menja els setze fetges dels jutges del jutjat que l'han penjat.
         </div>
       </b-card-section>
-      <b-card-section border-top>
+      <b-card-section border-top class="d-flex">
         <b-button
           to="/tipografia"
           variant="primary"
@@ -27,7 +27,7 @@
         >
           <span>Guies d'ús</span>
         </b-button>
-        <b-button href="/assets/fonts/Manrope.zip" variant="supermuted" size="lg">
+        <b-button href="/assets/fonts/Manrope.zip" variant="supermuted" size="lg" outline has-shadow>
           <fa :icon="['far', 'arrow-circle-down']" /> Manrope
         </b-button>
       </b-card-section>

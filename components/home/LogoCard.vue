@@ -27,7 +27,7 @@
           >
             <span>Guies d'ús</span>
           </b-button>
-          <b-button href="/assets/logo/logo.zip" variant="supermuted" size="lg">
+          <b-button href="/assets/logo/logo.zip" variant="supermuted" outline has-shadow size="lg">
             <fa :icon="['far', 'arrow-circle-down']" /> Logo
           </b-button>
         </div>
@@ -42,12 +42,10 @@
 
 <script>
 import splitIntoTwoLines from '@/components/logos/custom-local/twolines'
-import CompromisLogo from '@/components/logos/CompromisLogo'
 import CustomLocalGenerator from '@/components/logos/CustomLocalGenerator'
 
 export default {
   components: {
-    CompromisLogo,
     CustomLocalGenerator
   },
 
@@ -89,6 +87,7 @@ export default {
 
   .logo-preview-section {
     grid-column: span 2;
+    margin: 5rem 0;
   }
 
   @include media-breakpoint-down(md) {
@@ -125,7 +124,7 @@ export default {
     }
   }
 
-  svg {
+  .logo-wrapper::v-deep {
     max-width: 400px;
     width: 100%;
   }
@@ -134,7 +133,7 @@ export default {
 @include media-breakpoint-down(md) {
   .compromis-logo-preview {
     position: relative;
-    width: fit-content;
+    width: 100%;
     margin: 0 auto;
 
     .local-logo-preview {

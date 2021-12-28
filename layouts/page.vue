@@ -1,18 +1,8 @@
 <template>
   <div class="page">
-    <app-nav inside nav-label="Manual d'estil" logo-label="Disseny" />
+    <app-nav inside nav-label="Manual d'estil" logo-label="Disseny" @sidebar-toggled="toggleSidebar" />
     <div :class="{ 'sidebar-open': sidebarOpen }" class="container-fluid">
       <div class="layout">
-        <button
-          :aria-expanded="sidebarOpen"
-          type="button"
-          aria-label="Obrir menú"
-          aria-controls="sidebar"
-          class="navbar-toggler sidebar-toggler d-block d-lg-none"
-          @click="toggleSidebar"
-        >
-          <span class="navbar-toggler-icon" />
-        </button>
         <div class="sidebar-wrapper">
           <aside class="sidebar">
             <div class="sidebar-scroll">
@@ -101,18 +91,6 @@ export default {
       margin-right: 1rem;
       @include scrollbar;
     }
-
-    &-toggler {
-      z-index: 25;
-      position: fixed;
-      bottom: 2rem;
-      right: 1rem;
-      background: $gray-200;
-      color: $white;
-      border-radius: 50%;
-      height: 4rem;
-      width: 4rem;
-    }
   }
 
   .content {
@@ -123,6 +101,7 @@ export default {
     transition: .6s cubic-bezier(.56,0,.4,1.2);
 
     &-wrapper {
+      width: 100%;
       max-width: 1400px;
       margin: 0 auto;
     }

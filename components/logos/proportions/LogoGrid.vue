@@ -1,13 +1,13 @@
 <template>
   <figure>
     <div class="controls">
-      <b-button size="sm" class="toggle-button" @click="showGrid = !showGrid">
-        <span v-if="showGrid">
-          <fa :icon="['far', 'eye']" /> Guies
-        </span>
-        <span v-else>
-          <fa :icon="['far', 'eye-slash']" /> Guies
-        </span>
+      <b-button size="sm" class="toggle-button" variant="supermuted" @click="showGrid = !showGrid">
+        <template v-if="showGrid">
+          <fa fixed-width :icon="['far', 'eye']" /> Guies
+        </template>
+        <template v-else>
+          <fa fixed-width :icon="['far', 'eye-slash']" /> Guies
+        </template>
       </b-button>
     </div>
     <!-- eslint-disable-next-line -->

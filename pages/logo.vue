@@ -259,7 +259,6 @@
 </template>
 
 <script>
-import CompromisLogo from '@/components/logos/CompromisLogo.vue'
 import LogoGrid from '@/components/logos/proportions/LogoGrid.vue'
 import Careta from '@/components/logos/proportions/Careta.vue'
 import Quadrat from '@/components/logos/proportions/Quadrat.vue'
@@ -276,7 +275,6 @@ export default {
   layout: 'page',
 
   components: {
-    CompromisLogo,
     LogoGrid,
     CustomLocalGenerator
   },

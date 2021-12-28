@@ -1,15 +1,24 @@
 <template>
-  <nav :class="['navbar', {'navbar-inside': inside}]">
-    <div class="container-fluid">
-      <div class="nav-logo">
-        <a href="https://compromis.net" class="nav-logo-compromis" aria-label="Compromís">
-          <compromis-logo />
-        </a>
-        <nuxt-link v-if="logoLabel" to="/" class="nav-logo-append ms-2">
-          {{ logoLabel }}
-        </nuxt-link>
-      </div>
+  <nav :class="['navbar', 'container-fluid', {'navbar-inside': inside}]">
+    <div class="nav-logo">
+      <a href="https://compromis.net" class="nav-logo-compromis" aria-label="Compromís">
+        <compromis-logo collapsible="md" />
+      </a>
+      <nuxt-link v-if="logoLabel" to="/" class="nav-logo-append ms-2">
+        {{ logoLabel }}
+      </nuxt-link>
     </div>
+    <button
+      v-if="inside"
+      :aria-expanded="sidebarOpen"
+      type="button"
+      aria-label="Obrir menú"
+      aria-controls="sidebar"
+      class="menu-button d-block d-lg-none"
+      @click="$emit('sidebar-toggled')"
+    >
+      <span class="burger-icon" />
+    </button>
   </nav>
 </template>
 
@@ -35,58 +44,34 @@ export default {
 </script>
 
 <style lang="scss">
+  @import '../sass/variables';
+  @import "sass-burger/burger";
+
   .navbar {
     display: flex;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    padding: .75rem 0;
+    padding-top: .75rem;
+    padding-bottom: .75rem;
     transition: .25s ease-in-out;
     z-index: 10000;
+  }
 
-    &-toggler {
-      border: 0;
+  .menu-button {
+    display: inline-block;
+    padding: .5em;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+  }
 
-      &-icon {
-        background-image: none !important;
-        position: relative;
+  .burger-icon {
+    @include burger(25px, 3px, 5px, #444);
+  }
 
-        &::before,
-        &::after {
-          content: '';
-          position: absolute;
-          background: $body-color;
-          height: 2px;
-          left: 3px;
-          right: 3px;
-          top: 25%;
-          transition: .4s ease-in-out;
-        }
-
-        &::after {
-          content: '';
-          top: auto;
-          bottom: 25%;
-        }
-      }
-
-      &[aria-expanded="true"] {
-        .navbar-toggler-icon {
-          &::after {
-            transform: rotate(45deg) translateY(-5px) translateX(-3px);
-          }
-          &::before {
-            transform: rotate(-46deg) translateY(5px) translateX(-5px);
-          }
-        }
-      }
-    }
-
-    &-inside {
-      background: var(--white);
-      border-bottom: 1px var(--gray-200) solid;
-    }
+  .menu-button.is-active .burger-icon {
+    @include burger-to-cross;
   }
 
   @include media-breakpoint-down(lg) {
@@ -99,11 +84,6 @@ export default {
   @include media-breakpoint-down(md) {
     .navbar {
       z-index: 100;
-      padding: .75rem 0;
-
-      .nav-logo-append {
-        display: none !important;
-      }
 
       .app-label {
         margin-left: .5rem;
