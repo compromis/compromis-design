@@ -17,7 +17,7 @@
       <template #toggler>
         <b-button variant="supermuted" size="lg" class="input-append-last text-nowrap">
           Genera
-          <fa :icon="['far', 'chevron-down']" class="ms-2" />
+          <fa :icon="['far', 'chevron-down']" />
         </b-button>
       </template>
       <b-card>

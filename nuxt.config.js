@@ -3,11 +3,11 @@ export default {
   ** Headers of the page
   */
   head: {
-    title: 'Manual d\'estil - Compromís',
+    title: "Manual d'estil - Compromís",
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: process.env.npm_package_description || '' },
+      { hid: 'description', name: 'description', content: "La nostra guia d'estil de Compromís, amb tot el material gràfic, instruccions per a la seua correcta aplicació i ferramentes per facilitar la creació de material." },
       { name: 'msapplication-TileColor', content: '#2b5797' },
       { name: 'theme-color', content: '#353949' },
       { property: 'og:image', content: '/og-image.png' }
@@ -54,7 +54,6 @@ export default {
   modules: [
     // Doc: https://bootstrap-vue.js.org/docs/
     '@nuxtjs/axios',
-    'bootstrap-vue/nuxt',
     'nuxt-clipboard2',
     ['vue-scrollto/nuxt', { offset: -80 }],
     ['nuxt-fontawesome', {

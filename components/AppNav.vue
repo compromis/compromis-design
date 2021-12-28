@@ -1,16 +1,16 @@
 <template>
-  <b-navbar :class="['navbar', {'navbar-inside' : inside}]" :toggleable="true" fixed="top">
+  <nav :class="['navbar', {'navbar-inside': inside}]">
     <div class="container-fluid">
       <div class="nav-logo">
-        <nuxt-link to="/" class="nav-logo-compromis" aria-label="compromis">
+        <a href="https://compromis.net" class="nav-logo-compromis" aria-label="Compromís">
           <compromis-logo />
-        </nuxt-link>
-        <div v-if="logoLabel" class="nav-logo-append ms-2">
+        </a>
+        <nuxt-link v-if="logoLabel" to="/" class="nav-logo-append ms-2">
           {{ logoLabel }}
-        </div>
+        </nuxt-link>
       </div>
     </div>
-  </b-navbar>
+  </nav>
 </template>
 
 <script>
@@ -45,8 +45,7 @@ export default {
     right: 0;
     padding: .75rem 0;
     transition: .25s ease-in-out;
-    border-bottom: 1px solid var(--gray-200);
-    background: var(--white);
+    z-index: 10000;
 
     &-toggler {
       border: 0;
@@ -90,7 +89,7 @@ export default {
   @include media-breakpoint-down(lg) {
     .navbar {
       background: var(--white);
-      border-bottom: var(--gray-200);
+      border-bottom: 1px solid var(--gray-200);
     }
   }
 
