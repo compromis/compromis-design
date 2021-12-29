@@ -1,6 +1,6 @@
 <template>
   <div class="input-append generator">
-    <div class="input-field input-default input-lg input-border-supermuted">
+    <div class="input-field input-default input-lg text-lg input-border-supermuted">
       <input
         id="localName"
         class="input w-100"

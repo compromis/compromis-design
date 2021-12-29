@@ -4,9 +4,11 @@
       <a href="https://compromis.net" class="nav-logo-compromis" aria-label="Compromís">
         <compromis-logo collapsible="md" />
       </a>
-      <nuxt-link v-if="logoLabel" to="/" class="nav-logo-append ms-2">
-        {{ logoLabel }}
-      </nuxt-link>
+      <div class="nav-logo-append">
+        <nuxt-link v-if="logoLabel" to="/">
+          {{ logoLabel }}
+        </nuxt-link>
+      </div>
     </div>
     <button
       v-if="inside"
@@ -60,6 +62,11 @@ export default {
     padding-bottom: .75rem;
     transition: .25s ease-in-out;
     z-index: 10000;
+
+    &-inside {
+      background: var(--white);
+      border-bottom: 1px var(--gray-200) solid;
+    }
   }
 
   .menu-button {
