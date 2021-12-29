@@ -15,13 +15,9 @@
     <logo-card :municipalities="municipalities" />
     <banners-card />
 
-    <div class="row">
-      <div class="col-lg-6">
-        <typography-card />
-      </div>
-      <div class="col-lg-6">
-        <colors-card />
-      </div>
+    <div class="type-color-section">
+      <typography-card />
+      <colors-card />
     </div>
 
     <other-card />
@@ -58,5 +54,12 @@ export default {
 <style lang="scss" scoped>
 .intro {
   margin-top: 2rem;
+}
+
+.type-color-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: stretch;
 }
 </style>

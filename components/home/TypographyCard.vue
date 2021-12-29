@@ -3,13 +3,13 @@
     <h3>Tipografia</h3>
     <b-card size="lg">
       <b-card-section>
-        <h5 class="font-weight-bold mb-2" style="font-size: 2rem;">
+        <h5 class="text-bold mb-2" style="font-size: 2rem;">
           Manrope ExtraBold
         </h5>
-        <h5 class="font-weight-normal text-muted mb-4" style="font-size: 2rem;">
+        <h5 class="text-regular text-muted mb-4" style="font-size: 2rem;">
           Manrope Medium
         </h5>
-        <div class="font-weight-bold mb-2">
+        <div class="mb-2">
           Setze jutges d'un jutjat mengen fetge d'un penjat.
         </div>
         <div class="text-muted">

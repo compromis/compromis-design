@@ -16,8 +16,8 @@
       type="button"
       aria-label="Obrir menú"
       aria-controls="sidebar"
-      class="menu-button d-block d-lg-none"
-      @click="$emit('sidebar-toggled')"
+      :class="['menu-button d-block d-lg-none', {'is-active' : sidebarOpen}]"
+      @click="toggleSidebar"
     >
       <span class="burger-icon" />
     </button>
@@ -45,6 +45,13 @@ export default {
       type: Boolean,
       default: false
     }
+  },
+
+  methods: {
+    toggleSidebar () {
+      this.$emit('sidebar-toggled')
+      this.sidebarOpen = !this.sidebarOpen
+    }
   }
 }
 </script>
@@ -71,13 +78,13 @@ export default {
 
   .menu-button {
     display: inline-block;
-    padding: .5em;
-    background-color: #fafafa;
-    border: 1px solid #ccc;
+    padding: 0;
+    background-color: transparent;
+    border: none;
   }
 
   .burger-icon {
-    @include burger(25px, 3px, 5px, #444);
+    @include burger(1.5rem, 2px, 5px, var(--gray-700));
   }
 
   .menu-button.is-active .burger-icon {
