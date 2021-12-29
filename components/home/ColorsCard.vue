@@ -2,7 +2,7 @@
   <div>
     <h3>Colors</h3>
     <b-card size="lg">
-      <b-card-section class="color-swatches">
+      <b-card-section class="color-swatches home-card-content">
         <color-swatch :hex="['#d23517','#f39128']" name="gradient" mini />
         <color-swatch name="orange" hex="#FF6720" mini />
         <color-swatch name="gray-dark" hex="#353949" mini />

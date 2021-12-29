@@ -317,4 +317,8 @@ export default {
     width: auto;
   }
 }
+
+figure::v-deep .logo-wrapper {
+  margin: 0 auto;
+}
 </style>

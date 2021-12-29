@@ -2,17 +2,17 @@
   <div>
     <h3>Tipografia</h3>
     <b-card size="lg">
-      <b-card-section>
+      <b-card-section class="home-card-content">
         <h5 class="text-bold mb-2" style="font-size: 2rem;">
           Manrope ExtraBold
         </h5>
         <h5 class="text-regular text-muted mb-4" style="font-size: 2rem;">
           Manrope Medium
         </h5>
-        <div class="mb-2">
+        <div class="mb-2 text-bold">
           Setze jutges d'un jutjat mengen fetge d'un penjat.
         </div>
-        <div class="text-muted">
+        <div class="text-muted text-regular">
           Setze jutges d'un jutjat mengen fetge d'un penjat. Si el penjat es despenja, es menja els setze fetges dels jutges del jutjat que l'han penjat.
         </div>
       </b-card-section>
@@ -27,7 +27,14 @@
         >
           <span>Guies d'ús</span>
         </b-button>
-        <b-button href="/assets/fonts/Manrope.zip" variant="supermuted" size="lg" outline has-shadow>
+        <b-button
+          href="/assets/fonts/Manrope.zip"
+          variant="supermuted"
+          size="lg"
+          outline
+          has-shadow
+          class="ms-2"
+        >
           <fa :icon="['far', 'arrow-circle-down']" /> Manrope
         </b-button>
       </b-card-section>

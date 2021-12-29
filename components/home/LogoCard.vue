@@ -27,7 +27,14 @@
           >
             <span>Guies d'ús</span>
           </b-button>
-          <b-button href="/assets/logo/logo.zip" variant="supermuted" outline has-shadow size="lg">
+          <b-button
+            href="/assets/logo/logo.zip"
+            variant="supermuted"
+            outline
+            has-shadow
+            size="lg"
+            class="ms-2"
+          >
             <fa :icon="['far', 'arrow-circle-down']" /> Logo
           </b-button>
         </div>
@@ -127,6 +134,7 @@ export default {
   .logo-wrapper::v-deep {
     max-width: 400px;
     width: 100%;
+    margin: 0 auto;
   }
 }
 

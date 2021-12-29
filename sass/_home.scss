@@ -27,4 +27,11 @@
     color: $gray-700;
     margin-bottom: 1rem;
   }
+
+  &-card-content {
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 }
