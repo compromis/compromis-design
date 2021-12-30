@@ -17,7 +17,7 @@
       <template #toggler>
         <b-button variant="supermuted" size="lg" class="input-append-last text-nowrap">
           Descarrega
-          <fa :icon="['far', 'chevron-down']" />
+          <fa :icon="['far', 'chevron-down']" class="ms-1" />
         </b-button>
       </template>
       <b-card>

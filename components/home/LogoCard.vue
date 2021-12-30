@@ -25,7 +25,7 @@
             outline
             class="me-2"
           >
-            <span>Guies d'ús</span>
+            Guies d'ús
           </b-button>
           <b-button
             href="/assets/logo/logo.zip"
@@ -34,8 +34,9 @@
             has-shadow
             size="lg"
             class="ms-2"
+            aria-label="Descarrega el logo de Compromís"
           >
-            <fa :icon="['far', 'arrow-circle-down']" /> Logo
+            <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Logo
           </b-button>
         </div>
       </b-card-section>

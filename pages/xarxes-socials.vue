@@ -22,7 +22,7 @@
             href="https://compromis.net/espai/targes/?template=social"
             target="_blank"
           >
-            <fa :icon="['far', 'user-circle']" /> Crea una foto de perfil
+            <fa :icon="['far', 'user-circle']" class="me-1" /> Crea una foto de perfil
           </b-button>
           <span class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></span>
         </div>
@@ -108,7 +108,7 @@
             href="https://compromis.net/espai/targes"
             target="_blank"
           >
-            <fa :icon="['far', 'send-backward']" /> Generador de targes
+            <fa :icon="['far', 'send-backward']" class="me-1" /> Generador de targes
           </b-button>
           <span class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></span>
         </div>
@@ -135,7 +135,7 @@
             target="_blank"
             disabled
           >
-            <fa :icon="['far', 'book']" /> Manual de Xarxes
+            <fa :icon="['far', 'book']" class="me-1" /> Manual de Xarxes
           </b-button>
           <span class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /> Properament</span>
         </div>
@@ -173,7 +173,7 @@
             href="https://comprom.is/crea"
             target="_blank"
           >
-            <fa :icon="['far', 'link']" /> Acurtador d'enllaços
+            <fa :icon="['far', 'link']" class="me-1" /> Acurtador d'enllaços
           </b-button>
           <span class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></span>
         </div>

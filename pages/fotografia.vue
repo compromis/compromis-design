@@ -44,7 +44,7 @@
       href="https://comprom.is/fotos"
       target="_blank"
     >
-      <fa :icon="['far', 'portrait']" /> Galeria de fotos
+      <fa :icon="['far', 'portrait']" class="me-1" /> Galeria de fotos
     </b-button>
   </div>
 </template>

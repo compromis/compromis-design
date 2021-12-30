@@ -7,7 +7,7 @@
     </p>
     <p>
       <b-button variant="primary" size="lg" outline has-shadow href="/assets/fonts/Manrope.zip">
-        <fa :icon="['far', 'arrow-circle-down']" /> Descarrega Manrope
+        <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Descarrega Manrope
       </b-button>
     </p>
     <div class="row mt-8">

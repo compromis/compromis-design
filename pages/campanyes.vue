@@ -14,7 +14,7 @@
         target="_blank"
         rel="noopener noreferrer"
       >
-        <fa :icon="['far', 'megaphone']" /> Repositori de campanyes
+        <fa :icon="['far', 'megaphone']" class="me-1" /> Repositori de campanyes
       </b-button>
       <small class="text-muted ms-2"><fa :icon="['far', 'lock-alt']" /></small>
     </p>

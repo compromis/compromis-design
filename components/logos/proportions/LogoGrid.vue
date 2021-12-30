@@ -3,10 +3,10 @@
     <div class="controls">
       <b-button size="sm" class="toggle-button" variant="supermuted" @click="showGrid = !showGrid">
         <template v-if="showGrid">
-          <fa fixed-width :icon="['far', 'eye']" /> Guies
+          <fa fixed-width :icon="['far', 'eye']" class="me-1" /> Guies
         </template>
         <template v-else>
-          <fa fixed-width :icon="['far', 'eye-slash']" /> Guies
+          <fa fixed-width :icon="['far', 'eye-slash']" class="me-1" /> Guies
         </template>
       </b-button>
     </div>

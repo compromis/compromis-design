@@ -19,7 +19,7 @@
           outline
           class="me-2"
         >
-          <span>Guies d'ús</span>
+          Guies d'ús
         </b-button>
       </b-card-section>
     </b-card>

@@ -14,7 +14,7 @@
       target="_blank"
       rel="noopener noreferrer"
     >
-      <fa :icon="['far', 'photo-video']" /> Recursos per a vídeo
+      <fa :icon="['far', 'photo-video']" class="me-1" /> Recursos per a vídeo
     </b-button>
 
     <div class="row">
@@ -32,7 +32,7 @@
           href="https://www.facebook.com/pg/coaliciocompromis/videos"
           target="_blank"
         >
-          <fa :icon="['far', 'play']" /> Vídeos de Compromís
+          <fa :icon="['far', 'play']" class="me-1" /> Vídeos de Compromís
         </b-button>
 
         <h3>Vídeos d'intervencions o entrevistes</h3>

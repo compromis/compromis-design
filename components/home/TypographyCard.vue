@@ -25,7 +25,7 @@
           outline
           class="me-2"
         >
-          <span>Guies d'ús</span>
+          Guies d'ús
         </b-button>
         <b-button
           href="/assets/fonts/Manrope.zip"
@@ -35,7 +35,7 @@
           has-shadow
           class="ms-2"
         >
-          <fa :icon="['far', 'arrow-circle-down']" /> Manrope
+          <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Manrope
         </b-button>
       </b-card-section>
     </b-card>
