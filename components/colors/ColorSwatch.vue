@@ -3,7 +3,7 @@
     <button v-clipboard:copy="hex" v-clipboard:success="onCopy" :class="`color-swatch color-swatch-${name}`" href="#" @mouseleave="onLeave">
       <span :class="{'color-swatch-text': true, 'color-swatch-text-dark': dark }">{{ text }}</span>
     </button>
-    <h4 v-if="!mini">
+    <h4 v-if="!mini" class="mt-3 mt-lg-0">
       {{ title }}
     </h4>
     <p v-if="!mini">
@@ -257,7 +257,6 @@ export default {
 
     &-swatch {
       width: 100%;
-      margin-bottom: 1rem;
 
       &:hover {
         transform: none;

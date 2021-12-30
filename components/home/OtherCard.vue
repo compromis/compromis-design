@@ -28,7 +28,7 @@
 .other-section-grid {
   padding-bottom: 3rem;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 
   .card {
@@ -51,6 +51,7 @@
     mix-blend-mode: screen;
     opacity: 0;
     transition: 0.25s ease-in-out;
+    border-radius: $border-radius;
   }
 
   svg {
@@ -67,13 +68,6 @@
     svg {
       transform: rotate(-10deg);
     }
-  }
-}
-
-@include media-breakpoint-down(md) {
-  .other-section-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
   }
 }
 </style>

@@ -41,7 +41,7 @@ export default {
     display: grid;
     grid-template-columns: repeat(3, auto);
     grid-template-rows: repeat(2, 1fr);
-    grid-gap: 1rem;
+    column-gap: 1rem;
     justify-content: center;
   }
 
