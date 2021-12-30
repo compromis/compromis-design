@@ -13,10 +13,10 @@
         @keypress.enter="download('H')"
       >
     </div>
-    <b-dropdown opens="click">
+    <b-dropdown opens="hover">
       <template #toggler>
         <b-button variant="supermuted" size="lg" class="input-append-last text-nowrap">
-          Genera
+          Descarrega
           <fa :icon="['far', 'chevron-down']" />
         </b-button>
       </template>
