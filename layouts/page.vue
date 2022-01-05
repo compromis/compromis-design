@@ -71,7 +71,7 @@ export default {
   .sidebar-wrapper {
     display: flex;
     width: 23rem;
-    border-right: 1px solid $gray-200;
+    border-right: 1px solid var(--gray-200);
     flex-shrink: 0;
   }
 

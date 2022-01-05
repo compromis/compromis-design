@@ -155,7 +155,7 @@ export default {
     a {
       width: fit-content;
       display: flex;
-      color: $gray-800;
+      color: var(--gray-800);
       padding: .5rem 1rem .5rem .75rem;
       font-size: 1.25rem;
       font-weight: bold;

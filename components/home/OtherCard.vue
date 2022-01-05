@@ -40,26 +40,14 @@
   position: relative;
   overflow: hidden;
 
-  &::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: $gradient;
-    mix-blend-mode: screen;
-    opacity: 0;
-    transition: 0.25s ease-in-out;
-    border-radius: $border-radius;
-  }
-
   svg {
     transition: 0.25s ease-in-out;
   }
 
-  &:hover {
-    color: #000;
+  &:hover h4{
+    background: $gradient;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
     &::after {
       opacity: 1;
@@ -67,6 +55,7 @@
 
     svg {
       transform: rotate(-10deg);
+      color: var(--gradient-primary-start);
     }
   }
 }

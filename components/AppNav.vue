@@ -71,7 +71,7 @@ export default {
     z-index: 10000;
 
     &-inside {
-      background: var(--white);
+      background: var(--body-bg);
       border-bottom: 1px var(--gray-200) solid;
     }
   }
@@ -93,7 +93,6 @@ export default {
 
   @include media-breakpoint-down(lg) {
     .navbar {
-      background: var(--white);
       border-bottom: 1px solid var(--gray-200);
     }
   }

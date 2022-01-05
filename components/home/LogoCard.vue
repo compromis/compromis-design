@@ -117,7 +117,7 @@ export default {
 
   .local-logo-preview {
     font-size: 48px;
-    color: $gray-600;
+    color: var(--gray-600);
     letter-spacing: -.03em;
     margin-left: 20px;
 
@@ -135,7 +135,6 @@ export default {
   .logo-wrapper::v-deep {
     max-width: 400px;
     width: 100%;
-    margin: 0 auto;
   }
 }
 

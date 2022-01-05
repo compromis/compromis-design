@@ -165,8 +165,8 @@ export default {
 <style lang="scss" scoped>
 	.st0{fill:url(#SVGID_1_);}
 	.st1{fill:#FFFFFF;}
-	.st2{fill:#353949;}
-	.st3{fill:#979AA4;}
+	.st2{fill: var(--gray-900);}
+	.st3{fill: var(--gray-600);}
 	.st4{fill:#7683AF;}
 	.st5{fill:none;stroke:#7683AF;stroke-width:0.75;stroke-miterlimit:10;}
 	.st6{opacity:0.3;fill:#7683AF;}

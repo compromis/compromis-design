@@ -79,7 +79,7 @@ export default {
   .typography-sample {
     display: flex;
     padding: 1rem 3rem;
-    border: 1px $gray-200 solid;
+    border: 1px var(--gray-200) solid;
     border-radius: $border-radius;
     align-items: center;
 
@@ -96,7 +96,7 @@ export default {
       font-size: 1.25rem;
       position: relative;
       top: .6rem;
-      color: $gray-600;
+      color: var(--gray-600);
     }
   }
 </style>

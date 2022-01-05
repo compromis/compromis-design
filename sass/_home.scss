@@ -2,7 +2,6 @@
   max-width: 1200px;
 
   h2 {
-    color: $gray-900;
     font-size: clamp(4rem, 8vw, 9rem);
     margin-top: 8rem;
     margin-bottom: 1rem;
@@ -24,7 +23,7 @@
   label {
     font-weight: 900;
     font-size: 1rem;
-    color: $gray-700;
+    color: var(--gray-700);
     margin-bottom: 1rem;
   }
 

@@ -1,7 +1,9 @@
 <template>
   <div :class="{'container': !inPage, 'in-page': inPage}">
     <footer class="cardless-text">
-      <p>Si tens qualsevol dubte o suggeriment, pots contactar-nos en <a href="mailto:disseny@compromis.net">disseny@compromis.net</a></p>
+      <p>
+        Si tens qualsevol dubte o suggeriment, pots contactar-nos en <a href="mailto:disseny@compromis.net">disseny@compromis.net</a>
+      </p>
       <p>
         <strong>Manual d'Estil de Compromís</strong>.
         Darrera actualització: <span v-if="lastUpdated">{{ lastUpdated.getDate() }} {{ months[lastUpdated.getMonth()] }} {{ lastUpdated.getFullYear() }}.</span>
@@ -55,7 +57,7 @@ footer {
 
   footer {
     position: relative;
-    background: $white;
+    background: var(--bg-color);
     margin-top: 4rem;
     padding-left: 0;
     padding-right: 0;
@@ -71,7 +73,7 @@ footer {
       position: absolute;
       width: 4rem;
       height: 2px;
-      background: $gray-400;
+      background: var(--gray-400);
       top: .5rem;
     }
   }

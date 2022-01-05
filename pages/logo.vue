@@ -68,14 +68,14 @@
       </div>
       <div class="row">
         <div class="col-md-6 col-lg-4">
-          <figure>
-            <compromis-logo />
+          <figure style="background: white;">
+            <compromis-logo force-black />
           </figure>
           <figcaption>Positiu</figcaption>
         </div>
         <div class="col-md-6 col-lg-4">
-          <figure>
-            <compromis-logo mono />
+          <figure style="background: white; color: #353949;">
+            <compromis-logo mono force-black />
           </figure>
           <figcaption>Positiu B/N</figcaption>
         </div>
@@ -83,13 +83,13 @@
       <div class="row">
         <div class="col-md-6 col-lg-4">
           <figure class="figure-dark">
-            <compromis-logo inverted />
+            <compromis-logo force-white />
           </figure>
           <figcaption>Negatiu</figcaption>
         </div>
         <div class="col-md-6 col-lg-4">
           <figure class="figure-dark">
-            <compromis-logo mono style="color: white;" />
+            <compromis-logo mono force-white style="color: white;" />
           </figure>
           <figcaption>Negatiu B/N</figcaption>
         </div>
@@ -117,7 +117,7 @@
         </div>
         <div class="col-md-6 col-lg-4">
           <figure class="figure-error">
-            <img src="../assets/logo/nom.png" alt="Logo antic">
+            <img src="../assets/logo/nom.png" alt="Logo amb el nom de la marca alterat">
           </figure>
           <figcaption>No altereu el nom del marca</figcaption>
         </div>
@@ -125,13 +125,13 @@
       <div class="row">
         <div class="col-md-6 col-lg-4">
           <figure class="figure-error">
-            <img src="../assets/logo/disposicio.png" alt="Logo antic">
+            <img src="../assets/logo/disposicio.png" alt="Logo amb la careta dalt del text">
           </figure>
           <figcaption>No altereu la disposicó dels elements</figcaption>
         </div>
         <div class="col-md-6 col-lg-4">
           <figure class="figure-error">
-            <img src="../assets/logo/tipografia.png" alt="Logo antic">
+            <img src="../assets/logo/tipografia.png" alt="Logo amb una tipografia menys grossa">
           </figure>
           <figcaption>No canvieu la tipografia</figcaption>
         </div>
@@ -139,13 +139,13 @@
       <div class="row">
         <div class="col-md-6 col-lg-4">
           <figure class="figure-error">
-            <img src="../assets/logo/deformat.png" alt="Logo antic">
+            <img src="../assets/logo/deformat.png" alt="Logo deformat comprimit en l'eix de les X">
           </figure>
           <figcaption>No deformeu ni altereu la proporció</figcaption>
         </div>
         <div class="col-md-6 col-lg-4">
           <figure class="figure-error">
-            <img src="../assets/logo/color.png" alt="Logo antic">
+            <img src="../assets/logo/color.png" alt="Logo amb la careta color verd">
           </figure>
           <figcaption>No modifiqueu el color del símbol</figcaption>
         </div>
@@ -153,13 +153,13 @@
       <div class="row">
         <div class="col-md-6 col-lg-4">
           <figure class="figure-error">
-            <img src="../assets/logo/color-lletra.png" alt="Logo antic">
+            <img src="../assets/logo/color-lletra.png" alt="Logo amb les lletres taronja">
           </figure>
           <figcaption>No modifiqueu el color de les lletres</figcaption>
         </div>
         <div class="col-md-6 col-lg-4">
           <figure class="figure-error">
-            <img src="../assets/logo/ulls.png" alt="Logo antic">
+            <img src="../assets/logo/ulls.png" alt="Logo amb els ulls i la boca de la careta buits">
           </figure>
           <figcaption>Els ulls i boca de la "careta" no estan buits, han d’omplir-se de blanc. Respecteu les versions oficials</figcaption>
         </div>

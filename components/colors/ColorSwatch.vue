@@ -191,7 +191,7 @@ export default {
 
     &-white {
       background: $white;
-      border: .75px solid $gray-200;
+      border: 1px solid $gray-200;
     }
 
     &-gradient {
@@ -200,6 +200,7 @@ export default {
 
     &-gray-dark {
       background: $gray-900;
+      border: 1px solid $gray-800;
     }
 
     &-gray-med {

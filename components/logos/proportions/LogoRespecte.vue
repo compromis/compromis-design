@@ -208,7 +208,7 @@ export default {
   .st0{opacity:0.25;}
   .st1{fill:url(#SVGID_1_);}
   .st2{fill:#FFFFFF;}
-  .st3{fill:#353949;}
+  .st3{fill:var(--gray-900);}
   .st4{fill:url(#SVGID_2_);}
   .st5{fill:#7683AF;}
   .st6{fill:none;stroke:#7683AF;stroke-width:0.75;stroke-miterlimit:10;}

@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="material-impres">
     <h1>Material imprés</h1>
 
     <section>
@@ -486,3 +486,9 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.material-impres figure {
+  background: $white;
+}
+</style>

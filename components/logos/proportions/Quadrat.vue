@@ -139,7 +139,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-	.st0{fill:#353949;}
+	.st0{fill:var(--gray-900);}
 	.st1{fill:url(#SVGID_1_);}
 	.st2{fill:#FFFFFF;}
 	.st3{fill:#7683AF;}

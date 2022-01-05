@@ -53,7 +53,7 @@
     position: relative;
     font-size: 1.2rem;
     font-weight: 900;
-    color: $gray-900;
+    color: var(--gray-900);
     opacity: .75;
     transition: .25s ease-in-out;
 
@@ -63,12 +63,12 @@
     }
 
     &:hover {
-      color: $gray-900;
+      color: var(--gray-900);
       text-decoration: none;
       opacity: 1;
 
       span {
-        border-color: $gray-900;
+        border-color: var(--gray-900);
       }
     }
 
@@ -101,8 +101,8 @@
       width: 100%;
       display: block;
       position: relative;
-      background: $white;
-      color: $gray-900;
+      background: var(--white);
+      color: var(--gray-900);
       font-size: 1.5rem;
       font-weight: 900;
       letter-spacing: -1px;
@@ -143,10 +143,10 @@
         left: 50%;
         margin-top: -4rem;
         margin-left: -3.5rem;
-        color: $gray-400;
+        color: var(--gray-400);
         width: 7rem;
         height: 7rem;
-        background: $gray-100;
+        background: var(--gray-100);
         border-radius: $border-radius;
         font-size: 2.5rem;
       }
