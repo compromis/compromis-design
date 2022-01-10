@@ -24,12 +24,12 @@
     </div>
     <div class="row">
       <div class="col-xl-8">
-        <h3>
+        <h3 class="mt-5">
           Manrope ExtraBold
         </h3>
         <p>
           Utilitzada per a textos a tamany gran, títols, titulars, encapçalaments i per a destacar alguna cosa.
-          No s'ha d'utilitzar mai en textos llargs.
+          No s'ha d'utilitzar per a escriure textos llargs.
         </p>
       </div>
     </div>
@@ -47,11 +47,11 @@
     </div>
     <div class="row">
       <div class="col-xl-8">
-        <h3>
+        <h3 class="mt-5">
           Manrope Medium
         </h3>
         <p>
-          Utilitzada per a cos de text, documents, i textos en general. S'ha d'evitar usar-la en tamanys de lletra grans.
+          Utilitzada per a títols, cos de text, documents, i textos en general.
         </p>
       </div>
     </div>

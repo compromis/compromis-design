@@ -110,6 +110,11 @@
   }
 }
 
+@at-root .dark .page .button-outline.button-primary {
+  background: linear-gradient($gray-1000, $gray-1000) padding-box,
+    var(--button-color) border-box;
+}
+
 .assets {
   width: 100%;
 
