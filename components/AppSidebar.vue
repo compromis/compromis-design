@@ -1,6 +1,6 @@
 <template>
   <div class="menu" @click.capture="closeSidebar">
-    <ul>
+    <ul class="menu-disseny">
       <li>
         <nuxt-link to="/logo" class="template-item">
           <careta logo-style="mono" class="icon-careta" /> <span>Logo</span>
@@ -130,6 +130,11 @@
           <fa :icon="['far', 'megaphone']" fixed-width /> <span>Campanyes</span>
         </nuxt-link>
       </li>
+      <li>
+        <nuxt-link to="/web/setup" class="template-item template-item--xs">
+          <fa :icon="['far', 'code']" fixed-width /> <span>Web</span>
+        </nuxt-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -149,90 +154,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-  .menu {
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
-
-    a {
-      width: fit-content;
-      display: flex;
-      color: var(--gray-800);
-      padding: .5rem 1rem .5rem .75rem;
-      font-size: 1.25rem;
-      font-weight: bold;
-      transition: .3s ease-in-out;
-      align-items: center;
-      border-radius: $border-radius-sm;
-
-      span {
-        transition: border .3s cubic-bezier(.56,0,.4,1.2);
-        border-bottom: 2px transparent solid;
-      }
-
-      .svg-inline--fa, .icon-careta {
-        transition: transform .3s cubic-bezier(.56,0,.4,1.2);
-        margin-right: .75rem;
-      }
-
-      &.nuxt-link-active {
-        position: relative;
-
-        .svg-inline--fa, .icon-careta {
-         transform: rotate(-10deg);
-        }
-      }
-
-      &:hover {
-        text-decoration: none;
-        background: var(--gray-100);
-
-        .svg-inline--fa, .icon-careta {
-         transform: rotate(-10deg);
-        }
-      }
-
-      &:focus {
-        position: relative;
-        z-index: 1;
-      }
-    }
-
-    .nav {
-      position: static;
-      padding-left: 2.25rem;
-      margin-bottom: 1.5rem;
-      flex-direction: column;
-      line-height: 1.75;
-
-      a {
-        font-size: 1rem;
-        padding: 0 0.5rem;
-        font-weight: normal;
-        border-radius: $border-radius-xs;
-        margin-left: 0.5rem;
-
-        &:hover {
-          background: var(--gray-100);
-        }
-      }
-
-      .active {
-        a {
-          font-weight: bold;
-        }
-      }
-    }
-  }
-
-  .icon {
-    &-careta {
-      width: 1.56rem;
-      height: 1.25rem;
-    }
-  }
-</style>

@@ -70,7 +70,7 @@ export default {
             'faFilm', 'faMegaphone', 'faArrowCircleDown', 'faFile', 'faTimesCircle',
             'faSendBackward', 'faUserCircle', 'faBook', 'faPhotoVideo', 'faPlay', 'faPortrait',
             'faEye', 'faEyeSlash', 'faNewspaper', 'faAlignLeft', 'faQuoteLeft', 'faLockAlt',
-            'faEnvelope', 'faChevronDown', 'faLink'
+            'faEnvelope', 'faChevronDown', 'faLink', 'faCode', 'faWrench', 'faPuzzlePiece', 'faCog', 'faChevronLeft'
           ]
         }
       ]

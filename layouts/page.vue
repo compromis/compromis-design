@@ -1,12 +1,13 @@
 <template>
   <div class="page">
-    <app-nav inside nav-label="Manual d'estil" logo-label="Disseny" @sidebar-toggled="toggleSidebar" />
+    <app-nav inside nav-label="Manual d'estil" :logo-label="isWeb ? 'Web': 'Disseny'" @sidebar-toggled="toggleSidebar" />
     <div :class="{ 'sidebar-open': sidebarOpen }" class="container-fluid">
       <div class="layout">
         <div class="sidebar-wrapper">
           <aside class="sidebar">
             <div class="sidebar-scroll">
-              <app-sidebar />
+              <app-sidebar-web v-if="isWeb" />
+              <app-sidebar v-else />
             </div>
           </aside>
         </div>
@@ -26,18 +27,26 @@
 <script>
 import AppNav from '@/components/AppNav'
 import AppSidebar from '@/components/AppSidebar'
+import AppSidebarWeb from '@/components/AppSidebarWeb'
 import AppFooter from '@/components/AppFooter'
 
 export default {
   components: {
     AppNav,
     AppSidebar,
-    AppFooter
+    AppFooter,
+    AppSidebarWeb
   },
 
   data () {
     return {
       sidebarOpen: false
+    }
+  },
+
+  computed: {
+    isWeb () {
+      return this.$route.path.startsWith('/web/')
     }
   },
 
@@ -63,7 +72,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+ <style lang="scss" scoped>
   .layout {
     display: flex;
   }
@@ -77,12 +86,12 @@ export default {
 
   .sidebar {
     overflow: visible;
-    transition: left .6s cubic-bezier(.56,0,.4,1.2), width .6s cubic-bezier(.56,0,.4,1.2);
-    padding-top: 15vh;
+    transition: left 0.6s cubic-bezier(0.56, 0, 0.4, 1.2),
+      width 0.6s cubic-bezier(0.56, 0, 0.4, 1.2);
     flex-grow: 1;
 
     &-scroll {
-      top: calc(.25rem + #{$navbar-height});
+      top: calc(0.25rem + #{$navbar-height});
       position: sticky;
       max-height: calc(100vh - #{$navbar-height});
       overflow-y: auto;
@@ -98,7 +107,7 @@ export default {
     padding: 4rem;
     padding-top: 15vh;
     left: 0;
-    transition: .6s cubic-bezier(.56,0,.4,1.2);
+    transition: 0.6s cubic-bezier(0.56, 0, 0.4, 1.2);
 
     &-wrapper {
       width: 100%;
@@ -135,12 +144,12 @@ export default {
         z-index: 20;
         padding-left: 1rem;
         transform: translateX(-100%);
-        transition: .6s cubic-bezier(.56,0,.4,1.2);
+        transition: 0.6s cubic-bezier(0.56, 0, 0.4, 1.2);
       }
 
       &-scroll {
         top: 0;
-        padding-top: .75rem;
+        padding-top: 0.75rem;
       }
 
       &-open {
@@ -150,7 +159,7 @@ export default {
 
         .content {
           left: calc(75vw + 1rem);
-          opacity: .5;
+          opacity: 0.5;
         }
       }
     }
@@ -164,4 +173,4 @@ export default {
       overflow: hidden;
     }
   }
-</style>
+ </style>
