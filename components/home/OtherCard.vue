@@ -41,7 +41,7 @@
   overflow: hidden;
 
   svg {
-    transition: 0.25s ease-in-out;
+    transition: transform 0.25s ease-in-out;
   }
 
   &:hover h4{

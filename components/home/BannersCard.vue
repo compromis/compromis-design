@@ -108,7 +108,7 @@
       letter-spacing: -1px;
       height: 100%;
       border-radius: 1rem;
-      box-shadow: $shadow-default;
+      box-shadow: var(--shadow-default);
       transition: .2s ease-in-out;
 
       &::after {
@@ -118,7 +118,7 @@
       }
 
       &:hover {
-        box-shadow: $shadow-raised;
+        box-shadow: var(--shadow-raised);
         transform: rotate($rotation) scale(1.05);
 
         .template-item-name {

@@ -157,7 +157,7 @@ export default {
     height: 15rem;
     border-width: 0px;
     border-radius: 1rem;
-    box-shadow: $shadow-default;
+    box-shadow: var(--shadow-default);
     transition: .2s ease-in-out;
 
     &-text {
@@ -166,7 +166,7 @@ export default {
     }
 
     &:hover {
-      box-shadow: $shadow-default;
+      box-shadow: var(--shadow-raised);
       transform: rotate($rotation) scale(1.05);
       text-decoration: none;
 
