@@ -1,5 +1,5 @@
 <template>
-  <div class="menu">
+  <div class="menu" @click.capture="closeSidebar">
     <ul>
       <li>
         <nuxt-link to="/logo" class="template-item">
@@ -140,6 +140,12 @@ import Careta from '@/components/logos/Careta'
 export default {
   components: {
     Careta
+  },
+
+  methods: {
+    closeSidebar () {
+      this.$root.$emit('toggleSidebar')
+    }
   }
 }
 </script>

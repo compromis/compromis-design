@@ -47,6 +47,10 @@ export default {
     }
   },
 
+  mounted () {
+    this.$root.$on('toggleSidebar', this.toggleSidebar)
+  },
+
   methods: {
     toggleSidebar () {
       this.$emit('sidebar-toggled')
