@@ -1,8 +1,8 @@
 <template>
   <div :class="{'color': true, 'color--mini': mini }">
-    <button v-clipboard:copy="hex" v-clipboard:success="onCopy" :class="`color-swatch color-swatch-${name}`" href="#" @mouseleave="onLeave">
+    <b-button v-clipboard:copy="hex" v-clipboard:success="onCopy" :class="`color-swatch color-swatch-${name}`">
       <span :class="{'color-swatch-text': true, 'color-swatch-text-dark': dark }">{{ text }}</span>
-    </button>
+    </b-button>
     <h4 v-if="!mini" class="mt-3 mt-lg-0">
       {{ title }}
     </h4>
@@ -95,8 +95,6 @@ export default {
   methods: {
     onCopy () {
       this.text = 'Copiat!'
-    },
-    onLeave () {
       setTimeout(() => { this.text = 'Copiar HEX' }, 300)
     }
   }
@@ -165,8 +163,8 @@ export default {
       transition: .2s ease-in-out;
     }
 
-    &:hover {
-      box-shadow: var(--shadow-raised);
+    &:hover, &:focus {
+      box-shadow: var(--shadow-default);
       transform: rotate($rotation) scale(1.05);
       text-decoration: none;
 
