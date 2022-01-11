@@ -4,13 +4,20 @@
     <p class="intro">
       Components
     </p>
+
+    <card-docs />
   </div>
 </template>
 
 <script>
+import CardDocs from '@/components/web/CardDocs'
 
 export default {
-  layout: 'page'
+  layout: 'page',
+
+  components: {
+    CardDocs
+  }
 }
 </script>
 
