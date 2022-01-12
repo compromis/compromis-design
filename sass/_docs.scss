@@ -1,0 +1,27 @@
+.docs {
+  &-cols {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+  }
+
+  &-col-preview {
+    position: relative;
+
+    .sticky {
+      position: sticky;
+      top: $navbar-height + 1.5rem;
+    }
+  }
+
+  &-col-schema {
+    h3:first-child {
+      margin-top: 0;
+    }
+
+    h3 {
+      margin-bottom: 1.25rem;
+    }
+  }
+}

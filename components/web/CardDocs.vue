@@ -1,26 +1,9 @@
 <template>
-  <div>
+  <section class="docs">
     <h2>Card</h2>
     <div class="docs-cols">
-      <div class="docs-col-preview">
-        <div class="sticky">
-          <b-card v-bind="card" class="mb-4">
-            <b-card-section v-bind="cardSection">
-              <h2>Title</h2>
-            </b-card-section>
-            <img v-if="card.type != 'gradient'" style="height: 200px; object-fit: cover" :src="card.image">
-            <b-card-section v-bind="cardSection">
-              Hello
-            </b-card-section>
-            <b-card-list v-bind="cardList">
-              <li><a href="sads">I'm item one</a></li>
-              <li><a href="sads">I'm item two</a></li>
-            </b-card-list>
-          </b-card>
-        </div>
-      </div>
       <div class="docs-col-schema">
-        <h3>&lt;b-card&gt;</h3>
+        <h3><code>&lt;b-card&gt;</code></h3>
         <b-card type="outline" size="sm" overflow-hidden>
           <table class="table tint-alternate-rows vertical-divisions">
             <colgroup>
@@ -311,13 +294,37 @@
           </table>
         </b-card>
       </div>
-      <!-- eslint-disable -->
-      <snippet :properties="[card, cardSection, cardList]">{{code}}</snippet>
+      <div class="docs-col-preview">
+        <div class="sticky">
+          <flippable-card>
+            <template #frontSide>
+              <b-card v-bind="card">
+                <b-card-section v-bind="cardSection">
+                  <h2>Title</h2>
+                </b-card-section>
+                <img v-if="card.type != 'gradient'" style="height: 200px; object-fit: cover" :src="card.image">
+                <b-card-section v-bind="cardSection">
+                  Hello
+                </b-card-section>
+                <b-card-list v-bind="cardList">
+                  <li><a href="sads">I'm item one</a></li>
+                  <li><a href="sads">I'm item two</a></li>
+                </b-card-list>
+              </b-card>
+            </template>
+            <template #backSide>
+              <!-- eslint-disable -->
+              <snippet :properties="[card, cardSection, cardList]">{{code}}</snippet>
+            </template>
+          </flippable-card>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
+import FlippableCard from '@/components/web/FlippableCard'
 import Snippet from '@/components/web/Snippet'
 import inlinePropsMixin from '@/mixins/inlinePropsMixin.js'
 
@@ -352,7 +359,8 @@ const defaultCardListProps = {
 
 export default {
   components: {
-    Snippet
+    Snippet,
+    FlippableCard
   },
 
   mixins: [inlinePropsMixin],
