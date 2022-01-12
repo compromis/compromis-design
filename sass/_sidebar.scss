@@ -52,6 +52,13 @@
       .icon-careta {
         transform: rotate(-10deg);
       }
+
+      &.does-not-bank {
+        .svg-inline--fa,
+        .icon-careta {
+          transform: rotate(0);
+        }
+      }
     }
 
     &:focus {

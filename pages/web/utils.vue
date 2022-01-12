@@ -1,5 +1,5 @@
 <template>
-  <div class="page-utils">
+  <div class="page-utils docs">
     <h1>Utilitats</h1>
     <div class="col-xl-8">
       <h3>Color de fons</h3>
@@ -227,7 +227,7 @@
       </b-card>
 
       <h3>Utilitats de <code>bootstrap</code></h3>
-      A banda d'aquestes, el paquet Blobby hereta les <a href="https://getbootstrap.com/docs/5.1/utilities/">utilitats de bootstrap, consultables a la seua documentació</a>.
+      <p>A banda d'aquestes, el paquet Blobby hereta les <a href="https://getbootstrap.com/docs/5.1/utilities/">utilitats de Bootstrap</a>, consultables a la seua documentació.</p>
     </div>
   </div>
 </template>
@@ -240,22 +240,6 @@ export default {
 </script>
 
 <style lang="scss">
-.page-utils code {
-  margin-bottom: 0;
-  display: inline;
-  color: inherit;
-  border: 1px solid var(--gray-200);
-  border-radius: .5rem;
-  padding: .2rem;
-  background: transparent;
-}
-
-.page-utils h3 code {
-  background: var(--gray-50);
-  border-radius: .5rem;
-  padding: .25rem;
-}
-
 .page-utils td:first-child {
   width: 30%;
 }

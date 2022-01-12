@@ -2,7 +2,7 @@
   <div class="menu" @click.capture="closeSidebar">
     <ul class="menu-disseny">
       <li>
-        <nuxt-link to="/logo" class="template-item">
+        <nuxt-link to="/logo">
           <careta logo-style="mono" class="icon-careta" /> <span>Logo</span>
         </nuxt-link>
         <b-nav
@@ -30,12 +30,12 @@
         </b-nav>
       </li>
       <li>
-        <nuxt-link to="/tipografia" class="template-item">
+        <nuxt-link to="/tipografia">
           <fa :icon="['far', 'font-case']" fixed-width /> <span>Tipografia</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/colors" class="template-item">
+        <nuxt-link to="/colors">
           <fa :icon="['far', 'palette']" fixed-width /> <span>Colors</span>
         </nuxt-link>
         <b-nav
@@ -51,7 +51,7 @@
         </b-nav>
       </li>
       <li>
-        <nuxt-link to="/xarxes-socials" class="template-item">
+        <nuxt-link to="/xarxes-socials">
           <fa :icon="['far', 'share-alt']" fixed-width /> <span>Xarxes socials</span>
         </nuxt-link>
         <b-nav
@@ -79,7 +79,7 @@
         </b-nav>
       </li>
       <li>
-        <nuxt-link to="/material-impres" class="template-item template-item--xs">
+        <nuxt-link to="/material-impres">
           <fa :icon="['far', 'print']" fixed-width /> <span>Material imprés</span>
         </nuxt-link>
         <b-nav
@@ -116,22 +116,22 @@
         </b-nav>
       </li>
       <li>
-        <nuxt-link to="/fotografia" class="template-item template-item--xs">
+        <nuxt-link to="/fotografia">
           <fa :icon="['far', 'camera']" fixed-width /> <span>Fotografia</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/video" class="template-item template-item--xs">
+        <nuxt-link to="/video">
           <fa :icon="['far', 'film']" fixed-width /> <span>Vídeo</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/campanyes" class="template-item template-item--xs">
+        <nuxt-link to="/campanyes">
           <fa :icon="['far', 'megaphone']" fixed-width /> <span>Campanyes</span>
         </nuxt-link>
       </li>
       <li>
-        <nuxt-link to="/web/setup" class="template-item template-item--xs">
+        <nuxt-link to="/web/setup">
           <fa :icon="['far', 'code']" fixed-width /> <span>Web</span>
         </nuxt-link>
       </li>

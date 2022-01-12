@@ -30,16 +30,10 @@ pre[class*="language-"] {
   white-space: pre;
   word-spacing: normal;
   word-break: normal;
-
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
   tab-size: 4;
-
-  -webkit-hyphens: none;
-  -moz-hyphens: none;
-  -ms-hyphens: none;
   hyphens: none;
-  color: var(--text-muted);
+  border: 0;
+  color: var(--gray-300);
   background: var(--gray-1000);
 }
 
@@ -105,7 +99,7 @@ pre[class*="language-"] {
 
 code.language-javascript,
 .token.attr-name {
-  color: var(--gray-200);
+  color: var(--text-muted);
 }
 
 code.language-css,

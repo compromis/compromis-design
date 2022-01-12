@@ -11,6 +11,7 @@ import BTab from '@compromis/blobby/components/tab/BTab.vue'
 import BTabList from '@compromis/blobby/components/tab/BTabList.vue'
 import BInput from '@/components/blobby/BInput.vue'
 import BSelect from '@/components/blobby/BSelect.vue'
+import BCheckbox from '@/components/blobby/BCheckbox.vue'
 
 Vue.component('CompromisLogo', CompromisLogo)
 Vue.component('BCard', BCard)
@@ -23,3 +24,4 @@ Vue.component('BTab', BTab)
 Vue.component('BTabList', BTabList)
 Vue.component('BInput', BInput)
 Vue.component('BSelect', BSelect)
+Vue.component('BCheckbox', BCheckbox)

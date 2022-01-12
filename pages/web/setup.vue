@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="docs">
     <h1>Web</h1>
     <p class="intro">
       A Compromís utilitzem una sèrie de ferramentes pròpies per a desenvolupar les nostres pàgines web. A continuació hi ha una documentació i una guia de com emprar-les.
@@ -24,6 +24,3 @@ export default {
   layout: 'page'
 }
 </script>
-
-<style lang="scss" scoped>
-</style>

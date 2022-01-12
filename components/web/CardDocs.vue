@@ -7,26 +7,29 @@
         <b-card type="outline" size="sm" overflow-hidden>
           <table class="table tint-alternate-rows vertical-divisions">
             <colgroup>
-              <col width="15%">
-              <col width="10%">
-              <col width="10%">
               <col width="20%">
+              <col width="20%">
+              <col width="30%">
+              <col width="30%">
             </colgroup>
             <thead>
               <tr>
                 <th>nom</th>
                 <th>valors</th>
                 <th>descripció</th>
-                <th width="225">
-                  play
-                </th>
+                <th>play</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>type</td>
-                <td><code>shadow</code>, <code>solid</code>, <code>outline</code>, <code>gradient</code></td>
-                <td>String. Tipus de targeta</td>
+                <td class="lh-lg">
+                  <code class="default">shadow</code>,
+                  <code>solid</code>,
+                  <code>outline</code>,
+                  <code>gradient</code>
+                </td>
+                <td><small>String</small>. Tipus de targeta</td>
                 <td>
                   <b-select v-model="card.type" size="sm">
                     <option>shadow</option>
@@ -38,12 +41,25 @@
               </tr>
               <tr>
                 <td>variant</td>
-                <td><code>default</code>, <code>inverted</code>, <code>primary</code> <span class="text-muted">(gradient)</span>, <code>secondary</code> <span class="text-muted">(gradient)</span></td>
-                <td>Variant de la targeta</td>
+                <td class="lh-lg">
+                  <code class="default">default</code>,
+                  <code>white</code>,
+                  <code>black</code>,
+                  <code>primary</code>
+                  <b-badge variant="supermuted" size="sm">
+                    Gradient
+                  </b-badge>,
+                  <code>secondary</code>
+                  <b-badge variant="supermuted" size="sm">
+                    Gradient
+                  </b-badge>
+                </td>
+                <td><small>String</small>. Variant de la targeta</td>
                 <td>
                   <b-select v-model="card.variant" size="sm">
                     <option>default</option>
-                    <option>inverted</option>
+                    <option>white</option>
+                    <option>black</option>
                     <option>primary</option>
                     <option>secondary</option>
                   </b-select>
@@ -51,8 +67,10 @@
               </tr>
               <tr>
                 <td>size</td>
-                <td><code>sm</code>, <code>md</code>, <code>lg</code>, <code>xl</code></td>
-                <td>Tamany de la targeta</td>
+                <td class="lh-lg">
+                  <code>sm</code>, <code class="default">md</code>, <code>lg</code>, <code>xl</code>
+                </td>
+                <td><small>String</small>. Tamany de la targeta</td>
                 <td>
                   <b-select v-model="card.size" size="sm">
                     <option>sm</option>
@@ -64,45 +82,66 @@
               </tr>
               <tr>
                 <td>glowy</td>
-                <td />
+                <td class="lh-lg">
+                  <code class="default">true</code>, <code>false</code>
+                </td>
                 <td>
-                  Targeta degradat glowy <b-badge variant="supermuted" size="sm">
-                    Gradient-only
+                  <small>Bool</small>.
+                  Afegeix glow a la targeta
+                  <b-badge variant="supermuted" size="sm">
+                    Gradient
                   </b-badge>
                 </td>
                 <td>
-                  <input v-model="card.glowy" type="checkbox">
+                  <b-checkbox v-model="card.glowy" />
                 </td>
               </tr>
               <tr>
                 <td>padded</td>
-                <td />
-                <td>Si la card té padding</td>
+                <td class="lh-lg">
+                  <code>true</code>, <code class="default">false</code>
+                </td>
+                <td><small>Bool</small>. Afegeix espai entre la vora i el contingut</td>
                 <td>
-                  <input v-model="card.padded" type="checkbox">
-                  <div class="form-check">
-                    <input id="flexCheckChecked" class="form-check-input" type="checkbox" value="" checked>
-                    <label class="form-check-label" for="flexCheckChecked">
-                      Checked checkbox
-                    </label>
-                  </div>
+                  <b-checkbox v-model="card.padded" />
+                </td>
+              </tr>
+              <tr>
+                <td>rises</td>
+                <td class="lh-lg">
+                  <code>true</code>, <code class="default">false</code>
+                </td>
+                <td>
+                  <small>Bool</small>.
+                  Efecte on hover
+                  <b-badge variant="supermuted" size="sm">
+                    Shadow-only
+                  </b-badge>
+                </td>
+                <td>
+                  <b-checkbox v-model="card.rises" />
                 </td>
               </tr>
               <tr>
                 <td>overflow-hidden</td>
-                <td />
-                <td>Self-explanatory</td>
+                <td class="lh-lg">
+                  <code>true</code>, <code class="default">false</code>
+                </td>
+                <td><small>Bool</small>. Amaga l'overflow</td>
                 <td>
-                  <input v-model="card.overflowHidden" type="checkbox" checked>
+                  <b-checkbox v-model="card.overflowHidden" />
                 </td>
               </tr>
               <tr>
                 <td>image</td>
                 <td />
                 <td>
-                  Imatge de fons <b-badge variant="supermuted" size="sm">
+                  <small>String</small>.
+                  Imatge de fons
+                  <b-badge variant="supermuted" size="sm">
                     Gradient
-                  </b-badge> <b-badge variant="supermuted" size="sm">
+                  </b-badge>
+                  <b-badge variant="supermuted" size="sm">
                     Solid
                   </b-badge>
                 </td>
@@ -113,60 +152,44 @@
               <tr>
                 <td>to</td>
                 <td />
-                <td>Enllaç <code>&lt;nuxt-link&gt;</code></td>
+                <td><small>String</small>. Enllaç <code>&lt;nuxt-link&gt;</code></td>
                 <td>
-                  <b-input v-model="card.to" type="text" size="sm" checked />
+                  <b-input v-model="card.to" type="text" size="sm" />
                 </td>
               </tr>
               <tr>
                 <td>href</td>
                 <td />
-                <td>Enllaç <code>&lt;a&gt;</code></td>
+                <td><small>String</small>. Enllaç <code>&lt;a&gt;</code></td>
                 <td>
-                  <b-input v-model="card.href" type="text" checked size="sm" />
+                  <b-input v-model="card.href" type="text" size="sm" />
                 </td>
               </tr>
               <tr>
                 <td>as</td>
                 <td />
-                <td>Tag HTML</td>
+                <td><small>String</small>. Tag HTML</td>
                 <td>
-                  <b-input v-model="card.as" type="text" checked size="sm" />
-                </td>
-              </tr>
-              <tr>
-                <td>rises</td>
-                <td />
-                <td>
-                  Efecte on hover <b-badge variant="supermuted" size="sm">
-                    Shadow-only
-                  </b-badge>
-                </td>
-                <td>
-                  <input v-model="card.rises" type="checkbox">
+                  <b-input v-model="card.as" type="text" size="sm" />
                 </td>
               </tr>
             </tbody>
           </table>
         </b-card>
 
-        <h3>&lt;b-card-section&gt;</h3>
-        <p>Secció amb padding de la card</p>
+        <h3><code>&lt;b-card-section&gt;</code></h3>
+        <p>Secció de la targeta</p>
         <b-card type="outline" size="sm" overflow-hidden>
           <table class="table tint-alternate-rows vertical-divisions">
             <colgroup>
-              <col width="15%">
-              <col width="10%">
-              <col width="10%">
               <col width="20%">
               <col width="20%">
-              <col width="225">
+              <col width="30%">
+              <col width="30%">
             </colgroup>
             <thead>
               <tr>
                 <th>nom</th>
-                <th>tipus</th>
-                <th>defecte</th>
                 <th>valors</th>
                 <th>descripció</th>
                 <th>play</th>
@@ -175,65 +198,61 @@
             <tbody>
               <tr>
                 <td>border-top</td>
-                <td>Bool</td>
-                <td><code>false</code></td>
-                <td />
-                <td>Borde superior</td>
+                <td class="lh-lg">
+                  <code>true</code>, <code class="default">false</code>
+                </td>
+                <td><small>Bool</small>. Vora superior</td>
                 <td>
-                  <input v-model="cardSection.borderTop" type="checkbox">
+                  <b-checkbox v-model="cardSection.borderTop" />
                 </td>
               </tr>
               <tr>
                 <td>border-bottom</td>
-                <td>Bool</td>
-                <td><code>false</code></td>
-                <td />
-                <td>Borde inferior</td>
+                <td class="lh-lg">
+                  <code>true</code>, <code class="default">false</code>
+                </td>
+                <td><small>Bool</small>. Vora inferior</td>
                 <td>
-                  <input v-model="cardSection.borderBottom" type="checkbox">
+                  <b-checkbox v-model="cardSection.borderBottom" />
                 </td>
               </tr>
               <tr>
                 <td>border-left</td>
-                <td>Bool</td>
-                <td><code>false</code></td>
-                <td />
-                <td>Borde esquerra</td>
+                <td class="lh-lg">
+                  <code>true</code>, <code class="default">false</code>
+                </td>
+                <td><small>Bool</small>. Vora esquerra</td>
                 <td>
-                  <input v-model="cardSection.borderLeft" type="checkbox">
+                  <b-checkbox v-model="cardSection.borderLeft" />
                 </td>
               </tr>
               <tr>
                 <td>border-right</td>
-                <td>Bool</td>
-                <td><code>false</code></td>
-                <td />
-                <td>Borde dreta</td>
+                <td class="lh-lg">
+                  <code>true</code>, <code class="default">false</code>
+                </td>
+                <td><small>Bool</small>. Vora dreta</td>
                 <td>
-                  <input v-model="cardSection.borderRight" type="checkbox">
+                  <b-checkbox v-model="cardSection.borderRight" />
                 </td>
               </tr>
             </tbody>
           </table>
         </b-card>
 
-        <h3>&lt;b-card-list&gt;</h3>
-        <p>Wrapper per a llistes. Afegeix nice smart borders per dalt i/o per baix.</p>
+        <h3><code>&lt;b-card-list&gt;</code></h3>
+        <p>Llistat dins d'una targeta. Afegeix línies divisòries entre els elements.</p>
         <b-card type="outline" size="sm" overflow-hidden>
           <table class="table tint-alternate-rows vertical-divisions">
             <colgroup>
-              <col width="15%">
-              <col width="10%">
-              <col width="10%">
               <col width="20%">
               <col width="20%">
-              <col width="225">
+              <col width="30%">
+              <col width="30%">
             </colgroup>
             <thead>
               <tr>
                 <th>nom</th>
-                <th>tipus</th>
-                <th>defecte</th>
                 <th>valors</th>
                 <th>descripció</th>
                 <th>play</th>
@@ -242,50 +261,48 @@
             <tbody>
               <tr>
                 <td>padded</td>
-                <td>Bool</td>
-                <td><code>true</code></td>
-                <td />
-                <td>Si la card té padding</td>
+                <td class="lh-lg">
+                  <code class="default">true</code>, <code>false</code>
+                </td>
+                <td><small>Bool</small>. Afegeix espai entre la vora i el contingut</td>
                 <td>
-                  <input v-model="cardList.padded" type="checkbox">
+                  <b-checkbox v-model="cardList.padded" />
                 </td>
               </tr>
               <tr>
                 <td>divisions</td>
-                <td>Bool</td>
-                <td><code>true</code></td>
-                <td />
-                <td>Si la card té línies divisories</td>
+                <td class="lh-lg">
+                  <code class="default">true</code>, <code>false</code>
+                </td>
+                <td><small>Bool</small>. Afegeix línies divisòries entre els elements</td>
                 <td>
-                  <input v-model="cardList.divisions" type="checkbox">
+                  <b-checkbox v-model="cardList.divisions" />
                 </td>
               </tr>
               <tr>
                 <td>block-links</td>
-                <td>Bool</td>
-                <td><code>false</code></td>
-                <td />
-                <td>Si la llista té block links</td>
+                <td class="lh-lg">
+                  <code>true</code>, <code class="default">false</code>
+                </td>
+                <td><small>Bool</small>. Converteix els enllaços en blocs</td>
                 <td>
-                  <input v-model="cardList.blockLinks" type="checkbox">
+                  <b-checkbox v-model="cardList.blockLinks" />
                 </td>
               </tr>
               <tr>
                 <td>menu</td>
-                <td>Bool</td>
-                <td><code>false</code></td>
-                <td />
-                <td>Shortcut per a block-links, divisions false i padded false</td>
+                <td class="lh-lg">
+                  <code>true</code>, <code class="default">false</code>
+                </td>
+                <td><small>Bool</small>. Activa <code>block-links</code> i desactiva <code>divisions</code> i <code>padded</code></td>
                 <td>
-                  <input v-model="cardList.menu" type="checkbox">
+                  <b-checkbox v-model="cardList.menu" />
                 </td>
               </tr>
               <tr>
                 <td>as</td>
-                <td>String</td>
-                <td><code>ul</code></td>
                 <td />
-                <td>Tag HTML</td>
+                <td><small>String</small>. Tag HTML</td>
                 <td>
                   <b-input v-model="cardList.as" type="text" checked size="sm" />
                 </td>
@@ -300,15 +317,15 @@
             <template #frontSide>
               <b-card v-bind="card">
                 <b-card-section v-bind="cardSection">
-                  <h2>Title</h2>
+                  <h2>Títol</h2>
                 </b-card-section>
                 <img v-if="card.type != 'gradient'" style="height: 200px; object-fit: cover" :src="card.image">
                 <b-card-section v-bind="cardSection">
-                  Hello
+                  Setze jutges d'un jutjat mengen fetge d'un penjat. Si el penjat es despenja, es menja els setze fetges dels jutges del jutjat que l'han penjat.
                 </b-card-section>
                 <b-card-list v-bind="cardList">
-                  <li><a href="sads">I'm item one</a></li>
-                  <li><a href="sads">I'm item two</a></li>
+                  <li><a href="#">Enllaç 1</a></li>
+                  <li><a href="#">Enllaç 2</a></li>
                 </b-card-list>
               </b-card>
             </template>
@@ -377,14 +394,16 @@ export default {
     code () {
       return `<b-card${this.cardProps}>
   <b-card-section${this.cardSectionProps}>
-    <h2>Title</h2>
+    <h2>Títol</h2>
   </b-card-section>
   <b-card-section${this.cardSectionProps}>
-    Hello
+    Setze jutges d'un jutjat mengen fetge d'un penjat.
+    Si el penjat es despenja, es menja els setze fetges
+    dels jutges del jutjat que l'han penjat.
   </b-card-section>
   <b-card-list${this.cardListProps}>
-    <li><a href="sads">I'm item one</a></li>
-    <li><a href="sads">I'm item two</a></li>
+    <li><a href="#">Enllaç 1</a></li>
+    <li><a href="#">Enllaç 2</a></li>
   </b-card-list>
 </b-card>`
     },
