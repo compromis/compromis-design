@@ -2,15 +2,16 @@
   <b-radio-group size="sm" class="radio-values-group">
     <b-radio
       v-for="thisValue in values"
-      :key="thisValue"
+      :key="radioValue(thisValue)"
       v-model="selected"
-      :card="{size: 'sm', type: 'outline', rises: false, focusDark: true}"
+      :card="{size: 'sm', variant: 'outline', rises: false, focusDark: true}"
       class="px-2 py-1 text-sm"
       :name="name"
-      :default-value="thisValue"
+      :default-value="radioValue(thisValue)"
       focus-dark
+      :disabled="thisValue.disabled || disableAll"
     >
-      {{ thisValue }}
+      {{ radioValue(thisValue) }}
     </b-radio>
   </b-radio-group>
 </template>
@@ -29,6 +30,10 @@ export default {
     values: {
       type: Array,
       required: true
+    },
+    disableAll: {
+      type: Boolean,
+      default: false
     }
   },
 
@@ -41,6 +46,15 @@ export default {
       set (value) {
         this.$emit('input', value)
       }
+    }
+  },
+
+  methods: {
+    radioValue (value) {
+      if (typeof value !== 'object') {
+        return value
+      }
+      return value.value
     }
   }
 }

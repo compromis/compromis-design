@@ -2,7 +2,7 @@
   <div class="flippable-card">
     <div :class="['flippable-card-content', { flipped: side === 'code' }]">
       <div class="front-side" :tabindex="side === 'preview' ? null : '-1'">
-        <b-card type="outline" size="sm">
+        <b-card variant="outline" size="sm">
           <div role="button" tabindex="0" @click="side = 'code'">
             <b-card-section border-bottom class="flippable-card-header lh-sm">
               <strong>
@@ -19,7 +19,7 @@
         </b-card>
       </div>
       <div class="back-side" :tabindex="side === 'code' ? null : '-1'">
-        <b-card type="outline" size="sm" class="bg-black dark">
+        <b-card variant="outline" size="sm" class="bg-black dark">
           <div role="button" tabindex="0" @click="side = 'preview'">
             <b-card-section class="flippable-card-header lh-sm text-white" border-bottom>
               <strong>

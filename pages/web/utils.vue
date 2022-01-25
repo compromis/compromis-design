@@ -4,7 +4,7 @@
     <h2>Classes CSS</h2>
     <div class="col-xl-8">
       <h3>Color de fons</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <b-card-list>
           <li class="bg-color">
             .bg-color
@@ -31,7 +31,7 @@
       </b-card>
 
       <h3>Colors de text</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <b-card-list>
           <li class="text-color">
             .text-color
@@ -61,7 +61,7 @@
       </b-card>
 
       <h3>Color de degradat</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <b-card-list>
           <li class="bg-gradient gradient-primary">
             .gradient-primary .bg-gradient
@@ -74,7 +74,7 @@
           </li>
         </b-card-list>
       </b-card>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <b-card-list>
           <li class="text-gradient gradient-primary text-bold">
             .gradient-primary .text-gradient
@@ -92,7 +92,7 @@
         També pots definit un degradat personalitzat amb <code>--gradient-start</code> i <code>--gradient-end</code>
       </p>
 
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <b-card-list>
           <li style="--gradient-start: var(--indigo); --gradient-end: var(--cyan);" class="bg-gradient">
             .bg-gradient <code>--gradient-start: var(--indigo)</code> <code>--gradient-end: var(--cyan)</code>
@@ -104,7 +104,7 @@
       </b-card>
 
       <h3>Tamanys de text</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table tint-alternate-rows vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -124,7 +124,7 @@
       </b-card>
 
       <h3>Pesos de text</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table tint-alternate-rows vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -144,7 +144,7 @@
       </b-card>
 
       <h3>Vores</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table tint-alternate-rows vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -159,7 +159,7 @@
       </b-card>
 
       <h3>Color de les vores</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table tint-alternate-rows vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -173,7 +173,7 @@
       </b-card>
 
       <h3>Radi de les vores</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table tint-alternate-rows vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -188,7 +188,7 @@
       </b-card>
 
       <h3>Ombres</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table tint-alternate-rows vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -200,7 +200,7 @@
       </b-card>
 
       <h3>Enllaços</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table tint-alternate-rows vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -212,7 +212,7 @@
       </b-card>
 
       <h3>Enllaços en estat <code>:hover</code></h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table tint-alternate-rows vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -227,7 +227,7 @@
       </b-card>
 
       <h3>Estats <code>:focus</code></h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table tint-alternate-rows vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -241,7 +241,7 @@
       </b-card>
 
       <h3>Llistes</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table tint-alternate-rows vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -253,7 +253,7 @@
       </b-card>
 
       <h3>Utilitats per a <code>grid</code></h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table tint-alternate-rows vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -276,7 +276,7 @@
 
       <h2>Variables</h2>
       <h3>Colors de la marca</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table vertical-divisions">
           <colgroup>
             <col style="width:43%">
@@ -322,7 +322,7 @@
         </table>
       </b-card>
       <h3>Escala de grisos</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table vertical-divisions">
           <colgroup>
             <col style="width:43%">
@@ -365,7 +365,7 @@
         </table>
       </b-card>
       <h3>Arc de Sant Martí</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4 text-white">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4 text-white">
         <table class="table vertical-divisions">
           <colgroup>
             <col style="width:43%">
@@ -405,7 +405,7 @@
         </table>
       </b-card>
       <h3>Xarxes Socials</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4 text-white">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4 text-white">
         <table class="table vertical-divisions">
           <colgroup>
             <col style="width:43%">
@@ -440,7 +440,7 @@
       </b-card>
 
       <h3>Interfície d'usuari</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -471,7 +471,7 @@
       </b-card>
 
       <h3>Tipografia</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table vertical-divisions">
           <colgroup>
             <col width="30%">
@@ -481,7 +481,7 @@
         </table>
       </b-card>
       <h3>Tamanys de lletra</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table vertical-divisions tint-alternate-rows">
           <colgroup>
             <col width="30%">
@@ -500,7 +500,7 @@
         </table>
       </b-card>
       <h3>Ombres</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table vertical-divisions tint-alternate-rows">
           <colgroup>
             <col width="30%">
@@ -524,7 +524,7 @@
         </table>
       </b-card>
       <h3>Radi de les vores</h3>
-      <b-card type="outline" size="sm" overflow-hidden class="mt-4">
+      <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table vertical-divisions tint-alternate-rows">
           <colgroup>
             <col width="30%">

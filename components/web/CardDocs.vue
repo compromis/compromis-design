@@ -4,7 +4,7 @@
     <div class="docs-cols">
       <div class="docs-col-schema">
         <h3><code>&lt;b-card&gt;</code></h3>
-        <b-card type="outline" size="sm" overflow-hidden>
+        <b-card variant="outline" size="sm" overflow-hidden>
           <table class="table tint-alternate-rows vertical-divisions">
             <colgroup>
               <col width="20%">
@@ -20,17 +20,17 @@
             </thead>
             <tbody>
               <tr>
-                <td>type</td>
-                <td><small>String</small>. Tipus de targeta</td>
-                <td>
-                  <b-radio-values v-model="card.type" name="card-type" :values="['shadow', 'solid', 'outline', 'gradient']" />
-                </td>
-              </tr>
-              <tr>
                 <td>variant</td>
                 <td><small>String</small>. Variant de la targeta</td>
                 <td>
-                  <b-radio-values v-model="card.variant" name="card-variant" :values="['default', 'white', 'black', 'primary', 'secondary']" />
+                  <b-radio-values v-model="card.variant" name="card-variant" :values="['default', 'outline', 'gradient', 'custom-color']" />
+                </td>
+              </tr>
+              <tr>
+                <td>color</td>
+                <td><small>String</small>. Canvia el color de la vora en <code>outline</code> i el fons en <code>gradient</code>, <code>custom-color</code>.</td>
+                <td>
+                  <b-input v-model="card.color" type="text" size="sm" focus-dark :disabled="card.variant === 'default'" />
                 </td>
               </tr>
               <tr>
@@ -41,14 +41,14 @@
                 </td>
               </tr>
               <tr>
-                <td>glowy</td>
+                <td>shadow</td>
                 <td>
                   <small>Bool</small>.
-                  Afegeix glow a la targeta
+                  Afegeix sombra a la targeta
                   <code>Gradient</code>
                 </td>
                 <td>
-                  <b-radio-values v-model="card.glowy" name="card-glowy" :values="[true, false]" />
+                  <b-radio-values v-model="card.shadow" name="card-shadow" :values="[true, false]" :disable-all="card.variant === 'outline'" />
                 </td>
               </tr>
               <tr>
@@ -63,7 +63,6 @@
                 <td>
                   <small>Bool</small>.
                   Efecte on hover
-                  <code>Shadow-only</code>
                 </td>
                 <td>
                   <b-radio-values v-model="card.rises" name="card-rises" :values="[true, false]" />
@@ -80,9 +79,9 @@
                 <td>image</td>
                 <td>
                   <small>String</small>.
-                  Imatge de fons
-                  <code>Gradient</code>
-                  <code>Solid</code>
+                  Imatge de fons. Sols en
+                  <code>gradient</code>
+                  <code>custom-color</code>
                 </td>
                 <td>
                   <b-input v-model="card.image" type="text" size="sm" focus-dark />
@@ -115,7 +114,7 @@
 
         <h3><code>&lt;b-card-section&gt;</code></h3>
         <p>Secció de la targeta</p>
-        <b-card type="outline" size="sm" overflow-hidden>
+        <b-card variant="outline" size="sm" overflow-hidden>
           <table class="table tint-alternate-rows vertical-divisions">
             <colgroup>
               <col width="20%">
@@ -164,7 +163,7 @@
 
         <h3><code>&lt;b-card-list&gt;</code></h3>
         <p>Llistat dins d'una targeta. Afegeix línies divisòries entre els elements.</p>
-        <b-card type="outline" size="sm" overflow-hidden>
+        <b-card variant="outline" size="sm" overflow-hidden>
           <table class="table tint-alternate-rows vertical-divisions">
             <colgroup>
               <col width="20%">
@@ -254,14 +253,14 @@ import inlinePropsMixin from '@/mixins/inlinePropsMixin.js'
 import BRadioValues from '@/components/blobby/BRadioValues'
 
 const defaultCardProps = {
-  type: 'shadow',
   variant: 'default',
   size: 'md',
-  glowy: true,
+  shadow: true,
   padded: false,
   overflowHidden: false,
   rises: false,
   image: 'https://source.unsplash.com/random',
+  color: '',
   to: '',
   href: '',
   as: ''
