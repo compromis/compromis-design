@@ -1,7 +1,7 @@
 .docs {
   &-cols {
     display: grid;
-    gap: 2rem;
+    column-gap: 2rem;
     grid-template-columns: 1fr 1fr;
     margin-top: 1.5rem;
   }
@@ -51,4 +51,10 @@ h3 code {
   background: var(--gray-50);
   border-radius: .5rem;
   padding: .25rem;
+}
+
+@include media-breakpoint-down(lg) {
+  .docs-cols {
+    grid-template-columns: 1fr;
+  }
 }

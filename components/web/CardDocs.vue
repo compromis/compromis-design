@@ -182,21 +182,21 @@
                 <td>padded</td>
                 <td><small>Bool</small>. Afegeix espai entre la vora i el contingut</td>
                 <td>
-                  <b-radio-values v-model="cardList.padded" name="card-list-padded" :values="[true, false]" />
+                  <b-radio-values v-model="cardList.padded" name="card-list-padded" :disable-all="cardList.menu" :values="[true, false]" />
                 </td>
               </tr>
               <tr>
                 <td>divisions</td>
                 <td><small>Bool</small>. Afegeix línies divisòries entre els elements</td>
                 <td>
-                  <b-radio-values v-model="cardList.divisions" name="card-list-divisions" :values="[true, false]" />
+                  <b-radio-values v-model="cardList.divisions" name="card-list-divisions" :disable-all="cardList.menu" :values="[true, false]" />
                 </td>
               </tr>
               <tr>
                 <td>block-links</td>
                 <td><small>Bool</small>. Converteix els enllaços en blocs</td>
                 <td>
-                  <b-radio-values v-model="cardList.blockLinks" name="card-list-blocklinks" :values="[true, false]" />
+                  <b-radio-values v-model="cardList.blockLinks" name="card-list-blocklinks" :disable-all="cardList.menu" :values="[true, false]" />
                 </td>
               </tr>
               <tr>
@@ -247,10 +247,7 @@
 </template>
 
 <script>
-import FlippableCard from '@/components/web/FlippableCard'
-import Snippet from '@/components/web/Snippet'
-import inlinePropsMixin from '@/mixins/inlinePropsMixin.js'
-import BRadioValues from '@/components/blobby/BRadioValues'
+import docsMixin from '@/mixins/docsMixin.js'
 
 const defaultCardProps = {
   variant: 'default',
@@ -282,13 +279,7 @@ const defaultCardListProps = {
 }
 
 export default {
-  components: {
-    Snippet,
-    FlippableCard,
-    BRadioValues
-  },
-
-  mixins: [inlinePropsMixin],
+  mixins: [docsMixin],
 
   data () {
     return {
@@ -326,6 +317,16 @@ export default {
 
     cardListProps () {
       return this.inlineProps(this.cardList, defaultCardListProps)
+    }
+  },
+
+  watch: {
+    'cardList.menu' (value) {
+      if (value) {
+        this.cardList.divisions = false
+        this.cardList.padded = false
+        this.cardList.blockLinks = true
+      }
     }
   }
 }

@@ -1,4 +1,14 @@
+import FlippableCard from '@/components/web/FlippableCard'
+import Snippet from '@/components/web/Snippet'
+import BRadioValues from '@/components/blobby/BRadioValues'
+
 export default {
+  components: {
+    Snippet,
+    FlippableCard,
+    BRadioValues
+  },
+
   methods: {
     inlineProps (values, defaults) {
       let props = ''
