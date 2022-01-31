@@ -16,11 +16,12 @@
   }
 
   &-col-schema {
-    h3:first-child {
+    h4:first-child {
       margin-top: 0;
     }
 
-    h3 {
+    h4 {
+      margin-top: 3rem;
       margin-bottom: 1.25rem;
     }
 
@@ -47,7 +48,7 @@ code {
   background: transparent;
 }
 
-h3 code {
+h4 code {
   background: var(--gray-50);
   border-radius: .5rem;
   padding: .25rem;

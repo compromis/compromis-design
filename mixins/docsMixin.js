@@ -10,6 +10,10 @@ export default {
   },
 
   methods: {
+    copyObject (object) {
+      return JSON.parse(JSON.stringify(object))
+    },
+
     inlineProps (values, defaults) {
       let props = ''
 

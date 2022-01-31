@@ -1,9 +1,9 @@
 <template>
   <section class="docs">
-    <h2>Card</h2>
+    <h3>Targeta</h3>
     <div class="docs-cols">
       <div class="docs-col-schema">
-        <h3><code>&lt;b-card&gt;</code></h3>
+        <h4><code>&lt;b-card&gt;</code></h4>
         <b-card variant="outline" size="sm" overflow-hidden>
           <table class="table tint-alternate-rows vertical-divisions">
             <colgroup>
@@ -98,21 +98,21 @@
                 <td>href</td>
                 <td><small>String</small>. Enllaç <code>&lt;a&gt;</code></td>
                 <td>
-                  <b-input v-model="card.href" type="text" size="sm" />
+                  <b-input v-model="card.href" type="text" size="sm" focus-dark />
                 </td>
               </tr>
               <tr>
                 <td>as</td>
                 <td><small>String</small>. Tag HTML</td>
                 <td>
-                  <b-input v-model="card.as" type="text" size="sm" />
+                  <b-input v-model="card.as" type="text" size="sm" focus-dark />
                 </td>
               </tr>
             </tbody>
           </table>
         </b-card>
 
-        <h3><code>&lt;b-card-section&gt;</code></h3>
+        <h4><code>&lt;b-card-section&gt;</code></h4>
         <p>Secció de la targeta</p>
         <b-card variant="outline" size="sm" overflow-hidden>
           <table class="table tint-alternate-rows vertical-divisions">
@@ -161,7 +161,7 @@
           </table>
         </b-card>
 
-        <h3><code>&lt;b-card-list&gt;</code></h3>
+        <h4><code>&lt;b-card-list&gt;</code></h4>
         <p>Llistat dins d'una targeta. Afegeix línies divisòries entre els elements.</p>
         <b-card variant="outline" size="sm" overflow-hidden>
           <table class="table tint-alternate-rows vertical-divisions">
@@ -225,7 +225,7 @@
                 <b-card-section v-bind="cardSection">
                   <h2>Títol</h2>
                 </b-card-section>
-                <img v-if="card.type != 'gradient'" style="height: 200px; object-fit: cover" :src="card.image">
+                <img v-if="card.variant != 'gradient' && card.variant != 'custom-color'" style="height: 200px; object-fit: cover" :src="card.image">
                 <b-card-section v-bind="cardSection">
                   Setze jutges d'un jutjat mengen fetge d'un penjat. Si el penjat es despenja, es menja els setze fetges dels jutges del jutjat que l'han penjat.
                 </b-card-section>
@@ -283,9 +283,9 @@ export default {
 
   data () {
     return {
-      card: JSON.parse(JSON.stringify(defaultCardProps)),
-      cardSection: JSON.parse(JSON.stringify(defaultCardSectionProps)),
-      cardList: JSON.parse(JSON.stringify(defaultCardListProps))
+      card: this.copyObject(defaultCardProps),
+      cardSection: this.copyObject(defaultCardSectionProps),
+      cardList: this.copyObject(defaultCardListProps)
     }
   },
 

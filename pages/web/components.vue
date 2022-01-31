@@ -4,9 +4,11 @@
     <p class="intro">
       Components
     </p>
-
-    <card-docs />
-    <button-docs />
+    <section>
+      <h2>Elements</h2>
+      <card-docs />
+      <button-docs />
+    </section>
   </div>
 </template>
 
