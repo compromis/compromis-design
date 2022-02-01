@@ -39,10 +39,21 @@
 
 <script>
 export default {
+  props: {
+    flipped: {
+      type: Boolean,
+      default: false
+    }
+  },
+
   data () {
     return {
       side: 'preview'
     }
+  },
+
+  created () {
+    if (this.flipped) { this.side = 'code' }
   }
 }
 </script>

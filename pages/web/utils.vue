@@ -259,13 +259,13 @@
             <col width="30%">
             <col width="70%">
           </colgroup>
-          <tr v-for="n in 4" :key="n">
+          <tr v-for="n in 4" :key="`span-${n}`">
             <td>.span-{{ n }}</td><td><code>grid-column: span {{ n }}</code></td>
           </tr>
-          <tr v-for="n in 4" :key="n">
+          <tr v-for="n in 4" :key="`md-span-${n}`">
             <td>.md-span-{{ n }}</td><td><code>grid-column: span {{ n }}</code> (només en dispositius <code>md</code>)</td>
           </tr>
-          <tr v-for="n in 4" :key="n">
+          <tr v-for="n in 4" :key="`sm-pan-${n}`">
             <td>.sm-span-{{ n }}</td><td><code>grid-column: span {{ n }}</code> (només en dispositius <code>sm</code>)</td>
           </tr>
         </table>

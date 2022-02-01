@@ -7,6 +7,10 @@
     <section>
       <h2>Elements</h2>
       <card-docs />
+      <nav-docs />
+    </section>
+    <section>
+      <h2>Inputs</h2>
       <button-docs />
     </section>
   </div>
@@ -14,6 +18,7 @@
 
 <script>
 import CardDocs from '@/components/web/CardDocs'
+import NavDocs from '@/components/web/NavDocs'
 import ButtonDocs from '@/components/web/ButtonDocs'
 
 export default {
@@ -21,6 +26,7 @@ export default {
 
   components: {
     CardDocs,
+    NavDocs,
     ButtonDocs
   }
 }
