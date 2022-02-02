@@ -16,7 +16,7 @@
       type="button"
       aria-label="Obrir menú"
       aria-controls="sidebar"
-      :class="['menu-button d-block d-lg-none', {'is-active' : sidebarOpen}]"
+      :class="['menu-button d-block d-lg-none', {'is-active' : open}]"
       @click="toggleSidebar"
     >
       <span class="burger-icon" />
@@ -40,10 +40,12 @@ export default {
     inside: {
       type: Boolean,
       default: false
-    },
-    sidebarOpen: {
-      type: Boolean,
-      default: false
+    }
+  },
+
+  data () {
+    return {
+      sidebarOpen: false
     }
   },
 
