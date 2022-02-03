@@ -973,10 +973,10 @@
   dependencies:
     mime "^3.0.0"
 
-"@compromis/blobby@^1.1.0":
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/@compromis/blobby/-/blobby-1.1.0.tgz#42fd884f15e49b096129276c41fd2f5c0c603787"
-  integrity sha512-ZVxzsDcapmF64uFyeI1CdVgYgjSpLvDNfeHbmfaBE20u7Plwlri9uL4HcmVJNbUmg5auyrSdh9SgdbYZFeCiQg==
+"@compromis/blobby@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@compromis/blobby/-/blobby-1.1.1.tgz#9e5fb2c2d656b49213d629215b7d42b1d95859db"
+  integrity sha512-PNKRYIeJQC1lcjVYt4SgVD8mMFdmmkxPncovSNU7d2SS3HWAUZVBaG6dMT4euf6Me7WkD00KRF1aTm9dJ23Q8g==
   dependencies:
     bootstrap "^5.1.3"
     clipboard "^2.0.8"
