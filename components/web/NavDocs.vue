@@ -92,10 +92,7 @@
       </div>
       <div class="docs-col-preview">
         <div class="sticky">
-          <flippable-card>
-            <template #frontSide>
-              <iframe :srcdoc="navHtml" />
-            </template>
+          <flippable-card flipped>
             <template #backSide>
               <!-- eslint-disable -->
               <snippet :properties="[nav]">{{ code }}</snippet>
@@ -133,10 +130,6 @@ export default {
   },
 
   computed: {
-    navHtml () {
-      return 'Nav'
-    },
-
     code () {
       return `<b-nav${this.navProps}>
   <b-nav-item to="/">Enllaç</b-nav-item>

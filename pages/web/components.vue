@@ -8,6 +8,7 @@
       <h2>Elements</h2>
       <card-docs />
       <nav-docs />
+      <footer-docs />
     </section>
     <section>
       <h2>Inputs</h2>
@@ -20,6 +21,7 @@
 import CardDocs from '@/components/web/CardDocs'
 import NavDocs from '@/components/web/NavDocs'
 import ButtonDocs from '@/components/web/ButtonDocs'
+import FooterDocs from '@/components/web/FooterDocs'
 
 export default {
   layout: 'page',
@@ -27,7 +29,8 @@ export default {
   components: {
     CardDocs,
     NavDocs,
-    ButtonDocs
+    ButtonDocs,
+    FooterDocs
   }
 }
 </script>

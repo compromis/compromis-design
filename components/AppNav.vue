@@ -16,7 +16,7 @@
       type="button"
       aria-label="Obrir menú"
       aria-controls="sidebar"
-      :class="['menu-button d-block d-lg-none', {'is-active' : open}]"
+      :class="['menu-button d-block d-lg-none', {'is-active' : sidebarOpen}]"
       @click="toggleSidebar"
     >
       <span class="burger-icon" />
