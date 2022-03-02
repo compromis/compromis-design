@@ -46,7 +46,7 @@
             <dd>Quatricromia</dd>
           </dl>
 
-          <b-button variant="primary" size="lg" outline has-shadow href="/assets/material-impres/carta.zip">
+          <b-button variant="primary" size="lg" outline shadow href="/assets/material-impres/carta.zip">
             <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Plantilla de carta
           </b-button>
         </div>
@@ -90,7 +90,7 @@
             <dd>Quatricromia</dd>
           </dl>
 
-          <b-button variant="primary" size="lg" outline has-shadow href="/assets/material-impres/sobre.zip">
+          <b-button variant="primary" size="lg" outline shadow href="/assets/material-impres/sobre.zip">
             <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Plantilla de sobre
           </b-button>
         </div>
@@ -125,7 +125,7 @@
             <dd>Quatricromia</dd>
           </dl>
 
-          <b-button variant="primary" size="lg" outline has-shadow href="/assets/material-impres/sobre.zip">
+          <b-button variant="primary" size="lg" outline shadow href="/assets/material-impres/sobre.zip">
             <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Plantilla de sobre
           </b-button>
         </div>
@@ -177,7 +177,7 @@
             <dd>Quatricromia</dd>
           </dl>
 
-          <b-button variant="primary" size="lg" outline has-shadow href="/assets/material-impres/targetes-visita.zip">
+          <b-button variant="primary" size="lg" outline shadow href="/assets/material-impres/targetes-visita.zip">
             <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Plantilles de targetes
           </b-button>
         </div>
@@ -218,7 +218,7 @@
             <dt>Tintes d’impressió</dt>
             <dd>Quatricromia</dd>
           </dl>
-          <b-button variant="primary" size="lg" outline has-shadow href="/assets/material-impres/carpeta.zip">
+          <b-button variant="primary" size="lg" outline shadow href="/assets/material-impres/carpeta.zip">
             <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Plantilles de carpeta
           </b-button>
         </div>
@@ -263,7 +263,7 @@
             <dt>Tintes d’impressió</dt>
             <dd>Quatricromia</dd>
           </dl>
-          <b-button variant="primary" size="lg" outline has-shadow href="/assets/material-impres/roll-up.zip">
+          <b-button variant="primary" size="lg" outline shadow href="/assets/material-impres/roll-up.zip">
             <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Plantilles de roll-up
           </b-button>
         </div>
@@ -303,7 +303,7 @@
             <dd>Quatricromia</dd>
           </dl>
 
-          <b-button variant="primary" size="lg" outline has-shadow href="/assets/material-impres/faristols.zip">
+          <b-button variant="primary" size="lg" outline shadow href="/assets/material-impres/faristols.zip">
             <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Faristols
           </b-button>
         </div>
@@ -334,7 +334,7 @@
               Recomanem que per al disseny de formats grans com és la rotulació d'una seu, us poseu en contacte amb nosaltres a disseny@compromis.net
             </dd>
           </dl>
-          <b-button variant="primary" size="lg" outline has-shadow href="mailto:disseny@coaliciocompromis.net">
+          <b-button variant="primary" size="lg" outline shadow href="mailto:disseny@coaliciocompromis.net">
             <fa :icon="['far', 'envelope']" class="me-1" /> Contacta
           </b-button>
         </div>
@@ -356,7 +356,7 @@
               Recomanem que per al disseny de formats grans com és la rotulació d'una seu, us poseu en contacte amb nosaltres a disseny@compromis.net
             </dd>
           </dl>
-          <b-button variant="primary" size="lg" outline has-shadow href="mailto:disseny@coaliciocompromis.net">
+          <b-button variant="primary" size="lg" outline shadow href="mailto:disseny@coaliciocompromis.net">
             <fa :icon="['far', 'envelope']" class="me-1" /> Contacta
           </b-button>
         </div>
@@ -384,7 +384,7 @@
               Recomanem que per al disseny de formats grans com és la rotulació d'una seu, us poseu en contacte amb nosaltres a disseny@compromis.net
             </dd>
           </dl>
-          <b-button variant="primary" size="lg" outline has-shadow href="mailto:disseny@coaliciocompromis.net">
+          <b-button variant="primary" size="lg" outline shadow href="mailto:disseny@coaliciocompromis.net">
             <fa :icon="['far', 'envelope']" class="me-1" /> Contacta
           </b-button>
         </div>
@@ -440,7 +440,7 @@
             <dd>Quatricromia</dd>
           </dl>
 
-          <b-button variant="primary" size="lg" outline has-shadow href="/assets/material-impres/nota-premsa.zip">
+          <b-button variant="primary" size="lg" outline shadow href="/assets/material-impres/nota-premsa.zip">
             <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Plantilla de nota de premsa
           </b-button>
         </div>

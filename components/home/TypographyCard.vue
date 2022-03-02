@@ -21,7 +21,7 @@
           to="/tipografia"
           variant="primary"
           size="lg"
-          has-shadow
+          shadow
           outline
           class="me-2"
         >
@@ -32,7 +32,7 @@
           variant="supermuted"
           size="lg"
           outline
-          has-shadow
+          shadow
           class="ms-2"
         >
           <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Manrope

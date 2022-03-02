@@ -15,7 +15,7 @@
           to="/colors"
           variant="primary"
           size="lg"
-          has-shadow
+          shadow
           outline
           class="me-2"
         >

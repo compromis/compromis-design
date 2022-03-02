@@ -9,7 +9,7 @@
         variant="primary"
         size="lg"
         outline
-        has-shadow
+        shadow
         href="https://compromis.net/espai/targes/campanyes"
         target="_blank"
         rel="noopener noreferrer"
