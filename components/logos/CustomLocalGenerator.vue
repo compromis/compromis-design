@@ -32,18 +32,18 @@
             </button>
           </li>
           <li>
-            <button :disabled="!canDownload" class="text-nowrap" @click="download('H', 'svg')">
+            <button :disabled="!canDownload" class="text-nowrap" @click="download('H', 'png')">
               Horitzontal <span class="text-muted">(.png)</span>
             </button>
           </li>
           <li>
-            <button :disabled="!canDownload" class="text-nowrap" @click="download('H', 'svg')">
-              Comprimida <span class="text-muted">(.svg)</span>
+            <button :disabled="!canDownload" class="text-nowrap" @click="download('C', 'svg')">
+              Compacte <span class="text-muted">(.svg)</span>
             </button>
           </li>
           <li>
-            <button :disabled="!canDownload" class="text-nowrap" @click="download('H', 'svg')">
-              Comprimida <span class="text-muted">(.png)</span>
+            <button :disabled="!canDownload" class="text-nowrap" @click="download('C', 'png')">
+              Compacte <span class="text-muted">(.png)</span>
             </button>
           </li>
         </b-card-list>
