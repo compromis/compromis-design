@@ -40,7 +40,7 @@
       variant="primary"
       size="lg"
       outline
-      has-shadow
+      shadow
       href="https://comprom.is/fotos"
       target="_blank"
     >

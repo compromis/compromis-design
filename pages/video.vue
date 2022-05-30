@@ -9,7 +9,7 @@
       variant="primary"
       size="lg"
       outline
-      has-shadow
+      shadow
       href="https://comprom.is/materialvideo"
       target="_blank"
       rel="noopener noreferrer"
@@ -28,7 +28,7 @@
           variant="primary"
           size="lg"
           outline
-          has-shadow
+          shadow
           href="https://www.facebook.com/pg/coaliciocompromis/videos"
           target="_blank"
         >

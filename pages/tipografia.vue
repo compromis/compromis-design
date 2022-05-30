@@ -6,7 +6,7 @@
       (excepte en casos excepcionals) i usar els dos pesos (Medium i Extra Bold) com s'explica a continuació.
     </p>
     <p>
-      <b-button variant="primary" size="lg" outline has-shadow href="/assets/fonts/Manrope.zip">
+      <b-button variant="primary" size="lg" outline shadow href="/assets/fonts/Manrope.zip">
         <fa :icon="['far', 'arrow-circle-down']" class="me-1" /> Descarrega Manrope
       </b-button>
     </p>

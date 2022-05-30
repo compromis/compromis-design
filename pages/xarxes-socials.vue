@@ -18,7 +18,7 @@
             variant="primary"
             size="lg"
             outline
-            has-shadow
+            shadow
             href="https://compromis.net/espai/targes/?template=social"
             target="_blank"
           >
@@ -104,7 +104,7 @@
             variant="primary"
             size="lg"
             outline
-            has-shadow
+            shadow
             href="https://compromis.net/espai/targes"
             target="_blank"
           >
@@ -130,7 +130,7 @@
             variant="primary"
             size="lg"
             outline
-            has-shadow
+            shadow
             href="https://compromis.net/espai/targes"
             target="_blank"
             disabled
@@ -169,7 +169,7 @@
             variant="primary"
             size="lg"
             outline
-            has-shadow
+            shadow
             href="https://comprom.is/crea"
             target="_blank"
           >

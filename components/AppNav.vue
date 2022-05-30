@@ -100,6 +100,7 @@ export default {
   @include media-breakpoint-down(lg) {
     .navbar {
       border-bottom: 1px solid var(--gray-200);
+      background: $white;
     }
   }
 

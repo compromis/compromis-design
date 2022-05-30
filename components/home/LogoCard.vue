@@ -21,7 +21,7 @@
             to="/logo"
             variant="primary"
             size="lg"
-            has-shadow
+            shadow
             outline
             class="me-2"
           >
@@ -31,7 +31,7 @@
             href="/assets/logo/logo.zip"
             variant="supermuted"
             outline
-            has-shadow
+            shadow
             size="lg"
             class="ms-2"
             aria-label="Descarrega el logo de Compromís"
