@@ -100,15 +100,13 @@
           <flippable-card>
             <template #frontSide>
               <div class="offset">
-                <b-card-section>
-                  <input v-model="background" type="color">
-                </b-card-section>
                 <b-card-section :style="{ background }" class="background">
                   <b-button v-bind="button">
                     Text
                   </b-button>
                 </b-card-section>
               </div>
+              <b-color-input v-model="background" class="color-input" />
             </template>
             <template #backSide>
               <!-- eslint-disable -->
@@ -168,5 +166,11 @@ export default {
 
 .background {
   border-radius: 0 0 var(--border-radius) var(--border-radius);
+}
+
+.color-input {
+  position: absolute;
+  bottom: -50px;
+  right: 0;
 }
 </style>

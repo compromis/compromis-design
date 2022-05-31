@@ -9,6 +9,8 @@
       <card-docs />
       <nav-docs />
       <footer-docs />
+      <pill-docs />
+      <tab-docs />
     </section>
     <section>
       <h2>Formularis</h2>
@@ -34,6 +36,8 @@ import SelectDocs from '@/components/web/SelectDocs'
 import RadioDocs from '@/components/web/RadioDocs'
 import RadioGroupDocs from '@/components/web/RadioGroupDocs'
 import CheckboxDocs from '@/components/web/CheckboxDocs'
+import PillDocs from '@/components/web/PillDocs'
+import TabDocs from '@/components/web/TabDocs'
 
 export default {
   layout: 'page',
@@ -48,7 +52,9 @@ export default {
     SelectDocs,
     RadioDocs,
     RadioGroupDocs,
-    CheckboxDocs
+    CheckboxDocs,
+    PillDocs,
+    TabDocs
   }
 }
 </script>
