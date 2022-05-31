@@ -1,6 +1,8 @@
 <template>
   <section class="docs">
-    <h3>Pastilles</h3>
+    <h3 id="tabs">
+      Pestanyes
+    </h3>
     <div class="docs-cols">
       <div class="docs-col-schema">
         <h4><code>&lt;b-tab-list&gt;</code></h4>
@@ -162,17 +164,17 @@ export default {
 
   computed: {
     code () {
-      return `<b-pill-list>
-  <b-pill${this.pillProps}>
+      return `<b-tab-list${this.tabListProps}>
+  <b-tab>
     Pastilla 1
-  </b-pill>
-  <b-pill${this.pillProps}>
+  </b-tab>
+  <b-tab>
     Pastilla 2
-  </b-pill>
-  <b-pill${this.pillProps}>
+  </b-tab>
+  <b-tab>
     Pastilla 3
-  </b-pill>
-</b-pill-list>`
+  </b-tab>
+</b-tab-list>`
     },
 
     tabListProps () {

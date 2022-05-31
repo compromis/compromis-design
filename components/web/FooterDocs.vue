@@ -39,7 +39,7 @@
           </table>
         </b-card>
       </div>
-      <div class="docs-col-preview" style="--card-min-height: 200px;">
+      <div class="docs-col-preview" style="--card-min-height: 300px;">
         <div class="sticky">
           <flippable-card>
             <template #frontSide>

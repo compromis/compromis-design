@@ -1,7 +1,9 @@
 <template>
   <div class="page-utils docs">
     <h1>Utilitats</h1>
-    <h2>Classes CSS</h2>
+    <h2 id="css">
+      Classes CSS
+    </h2>
     <div class="col-xl-8">
       <h3>Color de fons</h3>
       <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
@@ -274,7 +276,9 @@
       <h3>Utilitats de <code>bootstrap</code></h3>
       <p>A banda d'aquestes, el paquet Blobby hereta les <a href="https://getbootstrap.com/docs/5.1/utilities/">utilitats de Bootstrap</a>, consultables a la seua documentació.</p>.
 
-      <h2>Variables</h2>
+      <h2 id="variables">
+        Variables
+      </h2>
       <h3>Colors de la marca</h3>
       <b-card variant="outline" size="sm" overflow-hidden class="mt-4">
         <table class="table vertical-divisions">

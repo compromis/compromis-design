@@ -26,6 +26,15 @@
           <b-nav-item v-scroll-to="'#footer'" href="#footer">
             Peu de pàgina
           </b-nav-item>
+          <b-nav-item v-scroll-to="'#pills'" href="#pills">
+            Pastilles
+          </b-nav-item>
+          <b-nav-item v-scroll-to="'#tabs'" href="#tabs">
+            Pestanyes
+          </b-nav-item>
+          <b-nav-item v-scroll-to="'#badges'" href="#badges">
+            Insignies
+          </b-nav-item>
           <b-nav-item v-scroll-to="'#button'" href="#button">
             Botó
           </b-nav-item>
@@ -47,21 +56,23 @@
           <b-nav-item v-scroll-to="'#checkbox'" href="#checkbox">
             Casella de selecció
           </b-nav-item>
-          <b-nav-item v-scroll-to="'#checkbox'" href="#pills">
-            Pastilles
-          </b-nav-item>
-          <b-nav-item v-scroll-to="'#checkbox'" href="#tabs">
-            Pestanyes
-          </b-nav-item>
-          <b-nav-item v-scroll-to="'#checkbox'" href="#badges">
-            Insignies
-          </b-nav-item>
         </b-nav>
       </li>
       <li>
         <nuxt-link to="/web/utils">
           <fa :icon="['far', 'wrench']" fixed-width /> <span>Utilitats</span>
         </nuxt-link>
+        <b-nav
+          v-if="$route.name === 'web-utils'"
+          v-b-scrollspy="80"
+        >
+          <b-nav-item v-scroll-to="'#css'" href="#css">
+            Classes CSS
+          </b-nav-item>
+          <b-nav-item v-scroll-to="'#variables'" href="#variables">
+            Variables
+          </b-nav-item>
+        </b-nav>
       </li>
     </ul>
   </div>
