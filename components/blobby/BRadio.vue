@@ -34,11 +34,11 @@ export default {
     },
     value: {
       type: [String, Boolean, Array, Object, Number],
-      required: true
+      default: null
     },
     defaultValue: {
       type: [String, Boolean, Array, Object, Number],
-      required: true
+      default: null
     },
     disabled: {
       type: Boolean,

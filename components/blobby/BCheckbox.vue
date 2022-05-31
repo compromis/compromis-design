@@ -1,14 +1,15 @@
 <template>
-  <div class="form-check">
+  <div :class="['form-check', isSwitch && 'form-switch', dark && 'checkbox-dark']">
     <input
-      :id="'checkbox' + name"
+      :id="'checkbox' + name + defaultValue"
       v-model="checked"
+      :name="name"
       class="form-check-input"
       type="checkbox"
-      :value="value"
-      :checked="checked"
+      :value="defaultValue"
+      :role="isSwitch ? 'switch' : null"
     >
-    <label :for="'checkbox' + name" class="form-check-label">
+    <label :for="'checkbox' + name + defaultValue" class="form-check-label">
       <slot />
     </label>
   </div>
@@ -23,13 +24,23 @@ export default {
     },
 
     value: {
-      type: Boolean,
+      type: [Boolean, Array],
       default: false
     },
 
     defaultValue: {
       type: String,
       default: 'true'
+    },
+
+    isSwitch: {
+      type: Boolean,
+      default: false
+    },
+
+    dark: {
+      type: Boolean,
+      default: false
     }
   },
 

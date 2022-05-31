@@ -13,7 +13,7 @@
       }
     ]"
   >
-    <label :for="name" :class="['input-label', 'text-sm', { 'visually-hidden': noLabel }]">
+    <label :for="name" :class="['input-label lh-1', { 'text-sm': variant !== 'float', 'visually-hidden': noLabel }]">
       {{ label }}
     </label>
     <component
@@ -41,7 +41,7 @@ export default {
   props: {
     value: {
       type: String,
-      required: true
+      default: ''
     },
     name: {
       type: String,
