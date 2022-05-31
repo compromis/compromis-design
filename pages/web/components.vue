@@ -11,7 +11,7 @@
       <footer-docs />
     </section>
     <section>
-      <h2>Inputs</h2>
+      <h2>Formularis</h2>
       <button-docs />
       <input-docs />
       <select-docs />

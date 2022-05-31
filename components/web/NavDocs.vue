@@ -1,6 +1,8 @@
 <template>
   <section class="docs">
-    <h3>Navegació</h3>
+    <h3 id="nav">
+      Navegació
+    </h3>
     <div class="docs-cols">
       <div class="docs-col-schema">
         <h4><code>&lt;b-nav&gt;</code></h4>
@@ -90,7 +92,7 @@
           </table>
         </b-card>
       </div>
-      <div class="docs-col-preview">
+      <div class="docs-col-preview" style="--card-min-height: 200px;">
         <div class="sticky">
           <flippable-card flipped>
             <template #backSide>

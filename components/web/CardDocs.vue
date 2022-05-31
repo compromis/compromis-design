@@ -1,6 +1,8 @@
 <template>
   <section class="docs">
-    <h3>Targeta</h3>
+    <h3 id="card">
+Targeta
+</h3>
     <div class="docs-cols">
       <div class="docs-col-schema">
         <h4><code>&lt;b-card&gt;</code></h4>

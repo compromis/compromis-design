@@ -1,9 +1,11 @@
 <template>
   <section class="docs">
-    <h3>Grup de camps</h3>
+    <h3 id="radiogroup">
+      Grup de botons d'opció
+    </h3>
     <div class="docs-cols">
       <div class="docs-col-schema">
-        <h4><code>&lt;b-input-group&gt;</code></h4>
+        <h4><code>&lt;b-radio-group&gt;</code></h4>
         <b-card variant="outline" size="sm" overflow-hidden>
           <table class="table tint-alternate-rows vertical-divisions">
             <colgroup>
@@ -36,7 +38,7 @@
           </table>
         </b-card>
       </div>
-      <div class="docs-col-preview">
+      <div class="docs-col-preview" style="--card-min-height: 250px;">
         <div class="sticky">
           <flippable-card>
             <template #frontSide>

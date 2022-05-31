@@ -1,6 +1,8 @@
 <template>
   <section class="docs">
-    <h3>Casella de selecció</h3>
+    <h3 id="checkbox">
+      Casella de selecció
+    </h3>
     <div class="docs-cols">
       <div class="docs-col-schema">
         <h4><code>&lt;b-checkbox&gt;</code></h4>
@@ -60,7 +62,7 @@
           </table>
         </b-card>
       </div>
-      <div class="docs-col-preview">
+      <div class="docs-col-preview" style="--card-min-height: 200px;">
         <div class="sticky">
           <flippable-card>
             <template #frontSide>
@@ -73,7 +75,6 @@
               <b-checkbox v-model="value" name="option3" default-value="tres" v-bind="checkbox">
                 Tres
               </b-checkbox>
-              value is {{ value }}
             </template>
             <template #backSide>
               <!-- eslint-disable -->

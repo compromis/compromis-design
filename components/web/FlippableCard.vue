@@ -62,7 +62,7 @@ export default {
 .flippable-card {
   perspective: 1000px;
   margin-top: calc(2.75rem + 2px);
-  min-height: 700px;
+  min-height: var(--card-min-height, 700px);
 
   &-content {
     position: relative;
