@@ -7,6 +7,7 @@ import BCardList from '@compromis/blobby/components/card/BCardList.vue'
 import BField from '@compromis/blobby/components/inputs/BField.vue'
 import BButton from '@compromis/blobby/components/button/BButton.vue'
 import BBadge from '@compromis/blobby/components/badge/BBadge.vue'
+import BBadgeList from '@compromis/blobby/components/badge/BBadgeList.vue'
 import BTab from '@compromis/blobby/components/tab/BTab.vue'
 import BTabList from '@compromis/blobby/components/tab/BTabList.vue'
 import BRadio from '@/components/blobby/BRadio.vue'
@@ -25,6 +26,7 @@ Vue.component('BCardList', BCardList)
 Vue.component('BField', BField)
 Vue.component('BButton', BButton)
 Vue.component('BBadge', BBadge)
+Vue.component('BBadgeList', BBadgeList)
 Vue.component('BPill', BPill)
 Vue.component('BPillList', BPillList)
 Vue.component('BTab', BTab)

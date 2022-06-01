@@ -33,7 +33,7 @@
             Pestanyes
           </b-nav-item>
           <b-nav-item v-scroll-to="'#badges'" href="#badges">
-            Insignies
+            Insígnies
           </b-nav-item>
           <b-nav-item v-scroll-to="'#button'" href="#button">
             Botó

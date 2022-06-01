@@ -11,6 +11,7 @@
       <footer-docs />
       <pill-docs />
       <tab-docs />
+      <badge-docs />
     </section>
     <section>
       <h2>Formularis</h2>
@@ -38,6 +39,7 @@ import RadioGroupDocs from '@/components/web/RadioGroupDocs'
 import CheckboxDocs from '@/components/web/CheckboxDocs'
 import PillDocs from '@/components/web/PillDocs'
 import TabDocs from '@/components/web/TabDocs'
+import BadgeDocs from '@/components/web/BadgeDocs'
 
 export default {
   layout: 'page',
@@ -54,7 +56,8 @@ export default {
     RadioGroupDocs,
     CheckboxDocs,
     PillDocs,
-    TabDocs
+    TabDocs,
+    BadgeDocs
   }
 }
 </script>
