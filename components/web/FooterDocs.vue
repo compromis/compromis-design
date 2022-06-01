@@ -23,7 +23,7 @@
             <tbody>
               <tr>
                 <td>variant</td>
-                <td><small>String</small>. Variant</td>
+                <td><small>String</small>. Per defecte, agafa el color de text i fons del pare. <em>Muted</em> força l'escala del grissos al text.</td>
                 <td>
                   <b-radio-values v-model="footer.variant" name="nav-collapseAt" :values="['default', 'muted']" />
                 </td>
@@ -43,7 +43,13 @@
         <div class="sticky">
           <flippable-card>
             <template #frontSide>
-              <b-footer v-bind="footer" />
+              <div :class="['background', `footer-${footer.variant}`]" :style="{ background, color }">
+                <b-footer v-bind="footer" />
+              </div>
+              <div v-if="footer.variant === 'default'" class="color-controls">
+                <label>Color de fons <b-color-input v-model="background" class="color-input" /></label>
+                <label>Color de text <b-color-input v-model="color" class="color-input" /></label>
+              </div>
             </template>
             <template #backSide>
               <!-- eslint-disable -->
@@ -74,7 +80,9 @@ export default {
 
   data () {
     return {
-      footer: this.copyObject(defaultFooterProps)
+      footer: this.copyObject(defaultFooterProps),
+      background: '#353949',
+      color: '#ffffff'
     }
   },
 
@@ -89,3 +97,29 @@ export default {
   }
 }
 </script>
+
+<style lang="scss" scoped>
+.background {
+  margin: -2rem;
+  padding: 2rem;
+  border-radius: 0 0 0.75rem 0.75rem;
+
+  &.footer-muted {
+    background: var(--white) !important;
+  }
+}
+
+.color-controls {
+  display: flex;
+  position: absolute;
+  bottom: -50px;
+  right: 0;
+  gap: 1rem;
+
+  label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+</style>

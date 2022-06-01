@@ -41,7 +41,7 @@
                 </td>
               </tr>
               <tr>
-                <td>focusDark</td>
+                <td>focus-dark</td>
                 <td>
                   <small>Bool</small>. Canvia el color del contorn de l'estat focus a negre.
                 </td>

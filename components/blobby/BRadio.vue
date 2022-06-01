@@ -5,6 +5,7 @@
     :class="[
       'radio-field',
       'form-check',
+      'radio-' + variant,
       {
         'selected': isSelected,
         'disabled': disabled,
@@ -43,6 +44,10 @@ export default {
     disabled: {
       type: Boolean,
       default: false
+    },
+    variant: {
+      type: String,
+      default: 'default'
     },
     focusDark: {
       type: Boolean,

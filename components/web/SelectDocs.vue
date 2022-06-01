@@ -74,7 +74,7 @@
                 <td>no-label</td>
                 <td><small>Bool</small>. Amaga l'etiqueta, però es manté per a lectors de pantalla.</td>
                 <td>
-                  <b-radio-values v-model="select.noLabel" name="select-block" :values="[true, false]" />
+                  <b-radio-values v-model="select.noLabel" name="select-no-label" :values="[true, false]" />
                 </td>
               </tr>
               <tr>
