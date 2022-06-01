@@ -13,8 +13,10 @@
               </b-button>
             </b-card-section>
           </div>
-          <b-card-section class="p-5">
-            <slot name="frontSide" />
+          <b-card-section :class="{ 'p-5': !cardEdge, 'p-0 card-edge': cardEdge }">
+            <div class="background">
+              <slot name="frontSide" />
+            </div>
           </b-card-section>
         </b-card>
       </div>
@@ -41,6 +43,11 @@
 export default {
   props: {
     flipped: {
+      type: Boolean,
+      default: false
+    },
+
+    cardEdge: {
       type: Boolean,
       default: false
     }
@@ -114,6 +121,14 @@ export default {
       &:hover {
         background: $gray-1000;
       }
+    }
+  }
+
+  .card-edge {
+    .background {
+      padding: 2rem;
+      border-radius: 0 0 var(--border-radius) var(--border-radius);
+      background: var(--card-background);
     }
   }
 }

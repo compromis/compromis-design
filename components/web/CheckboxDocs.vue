@@ -34,19 +34,10 @@
                 </td>
               </tr>
               <tr>
-                <td>disabled</td>
-                <td><small>Bool</small>. Deshabilita el camp.</td>
+                <td>variant</td>
+                <td><small>String</small>. Variant del camp</td>
                 <td>
-                  <b-radio-values v-model="checkbox.disabled" name="checkbox-disabled" :values="[true, false]" />
-                </td>
-              </tr>
-              <tr>
-                <td>focus-dark</td>
-                <td>
-                  <small>Bool</small>. Canvia el color del contorn de l'estat focus a negre.
-                </td>
-                <td>
-                  <b-radio-values v-model="checkbox.focusDark" name="checkbox-focus-dark" :values="[true, false]" />
+                  <b-radio-values v-model="checkbox.variant" name="checkbox-variant" :values="['default', 'inverted', 'black', 'white']" />
                 </td>
               </tr>
               <tr>
@@ -56,6 +47,13 @@
                 </td>
                 <td>
                   <b-radio-values v-model="checkbox.isSwitch" name="checkbox-is-switch" :values="[true, false]" />
+                </td>
+              </tr>
+              <tr>
+                <td>disabled</td>
+                <td><small>Bool</small>. Deshabilita el camp.</td>
+                <td>
+                  <b-radio-values v-model="checkbox.disabled" name="checkbox-disabled" :values="[true, false]" />
                 </td>
               </tr>
             </tbody>
@@ -92,7 +90,7 @@ import docsMixin from '@/mixins/docsMixin.js'
 
 const defaultCheckboxProps = {
   disabled: false,
-  focusDark: false,
+  variant: 'default',
   isSwitch: false
 }
 

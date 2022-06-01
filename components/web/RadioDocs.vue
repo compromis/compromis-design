@@ -34,6 +34,13 @@
                 </td>
               </tr>
               <tr>
+                <td>variant</td>
+                <td><small>String</small>. Variant del camp</td>
+                <td>
+                  <b-radio-values v-model="radio.variant" name="radio-variant" :values="['default', 'inverted', 'black', 'white']" />
+                </td>
+              </tr>
+              <tr>
                 <td>disabled</td>
                 <td><small>Bool</small>. Deshabilita el camp.</td>
                 <td>
@@ -41,7 +48,7 @@
                 </td>
               </tr>
               <tr>
-                <td>focusDark</td>
+                <td>focus-dark</td>
                 <td>
                   <small>Bool</small>. Canvia el color del contorn de l'estat focus a negre.
                 </td>
@@ -92,6 +99,7 @@ import docsMixin from '@/mixins/docsMixin.js'
 
 const defaultRadioProps = {
   disabled: false,
+  variant: 'default',
   focusDark: false,
   card: false
 }

@@ -97,16 +97,11 @@
       </div>
       <div class="docs-col-preview" style="--card-min-height: 200px;">
         <div class="sticky">
-          <flippable-card>
+          <flippable-card card-edge :class="`button-${button.variant}`">
             <template #frontSide>
-              <div class="offset">
-                <b-card-section :style="{ background }" class="background">
-                  <b-button v-bind="button">
-                    Text
-                  </b-button>
-                </b-card-section>
-              </div>
-              <b-color-input v-model="background" class="color-input" />
+              <b-button v-bind="button">
+                Text
+              </b-button>
             </template>
             <template #backSide>
               <!-- eslint-disable -->
@@ -172,5 +167,9 @@ export default {
   position: absolute;
   bottom: -50px;
   right: 0;
+}
+
+.button-default {
+  --card-background: var(--gray-50);
 }
 </style>
