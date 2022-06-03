@@ -1,6 +1,8 @@
 <template>
   <section class="docs">
-    <h3>Pastilles</h3>
+    <h3 id="pills">
+      Pastilles
+    </h3>
     <div class="docs-cols">
       <div class="docs-col-schema">
         <h4><code>&lt;b-pill&gt;</code> i <code>&lt;b-pill-list&gt;</code></h4>
@@ -84,7 +86,6 @@
                   </b-pill-list>
                 </b-card-section>
               </div>
-              <b-color-input v-model="background" class="color-input" />
             </template>
             <template #backSide>
               <!-- eslint-disable -->
@@ -114,8 +115,7 @@ export default {
 
   data () {
     return {
-      pill: this.copyObject(defaultPillProps),
-      background: '#262934'
+      pill: this.copyObject(defaultPillProps)
     }
   },
 
@@ -140,19 +140,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.offset {
-  margin: -2rem;
-}
-
-.background {
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
-}
-
-.color-input {
-  position: absolute;
-  bottom: -50px;
-  right: 0;
-}
-</style>

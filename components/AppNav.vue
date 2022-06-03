@@ -10,6 +10,13 @@
         </nuxt-link>
       </div>
     </div>
+    <div v-if="inside">
+      <b-checkbox v-model="dark" name="darkmode" default-value="true" is-switch>
+        <template #prepend>
+          Mode nit
+        </template>
+      </b-checkbox>
+    </div>
     <button
       v-if="inside"
       :aria-expanded="sidebarOpen"
@@ -45,11 +52,22 @@ export default {
 
   data () {
     return {
-      sidebarOpen: false
+      sidebarOpen: false,
+      dark: false
+    }
+  },
+
+  watch: {
+    dark (dark) {
+      this.handleDarkMode(dark)
     }
   },
 
   mounted () {
+    const prefersDark = localStorage.getItem('prefers-dark')
+    this.dark = prefersDark
+    this.handleDarkMode(prefersDark)
+
     this.$root.$on('toggleSidebar', this.toggleSidebar)
   },
 
@@ -57,6 +75,18 @@ export default {
     toggleSidebar () {
       this.$emit('sidebar-toggled')
       this.sidebarOpen = !this.sidebarOpen
+    },
+
+    handleDarkMode (dark) {
+      const docHtml = document.documentElement
+
+      if (dark) {
+        docHtml.classList.add('dark')
+        localStorage.setItem('prefers-dark', true)
+      } else {
+        docHtml.classList.remove('dark')
+        localStorage.removeItem('prefers-dark')
+      }
     }
   }
 }

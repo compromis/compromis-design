@@ -128,7 +128,6 @@
                   </b-tab-list>
                 </b-card-section>
               </div>
-              <b-color-input v-model="background" class="color-input" />
             </template>
             <template #backSide>
               <!-- eslint-disable -->
@@ -157,7 +156,6 @@ export default {
   data () {
     return {
       tabList: this.copyObject(defaultTabListProps),
-      background: '#262934',
       selectedTab: 1
     }
   },
@@ -183,19 +181,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-.offset {
-  margin: -2rem;
-}
-
-.background {
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
-}
-
-.color-input {
-  position: absolute;
-  bottom: -50px;
-  right: 0;
-}
-</style>

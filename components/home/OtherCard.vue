@@ -17,8 +17,8 @@
       <b-card padded rises to="/campanyes" class="other-card">
         <h4><fa :icon="['far', 'megaphone']" fixed-width class="me-2" /> Campanyes</h4>
       </b-card>
-      <b-card padded rises href="https://somriure.compromis.net" target="_blank" class="other-card">
-        <h4><fa :icon="['far', 'newspaper']" fixed-width class="me-2" />El Somriure</h4>
+      <b-card padded rises to="/web/setup" class="other-card">
+        <h4><fa :icon="['far', 'code']" fixed-width class="me-2" />Web</h4>
       </b-card>
     </div>
   </div>
