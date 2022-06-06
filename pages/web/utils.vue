@@ -348,23 +348,23 @@
           <tr style="background: var(--gray-400)">
             <td><code>--gray-400</code></td><td><code>$gray-400</code></td><td><code>#bec0c8</code></td>
           </tr>
-          <tr style="background: var(--gray-500)">
+          <tr style="background: var(--gray-500); color: var(--gray-50);">
             <td><code>--gray-500</code></td><td><code>$gray-500</code></td><td><code>#aaadb6</code></td>
           </tr>
-          <tr class="text-white" style="background: var(--gray-600)">
+          <tr style="background: var(--gray-600); color: var(--gray-50);">
             <td><code>--gray-600</code></td><td><code>$gray-600</code></td><td><code>#979aa4</code></td>
           </tr>
-          <tr class="text-white" style="background: var(--gray-700)">
+          <tr style="background: var(--gray-700); color: var(--gray-50);">
             <td><code>--gray-700</code></td><td><code>$gray-700</code></td><td><code>#707380</code></td>
           </tr>
-          <tr class="text-white" style="background: var(--gray-800)">
+          <tr style="background: var(--gray-800); color: var(--gray-50);">
             <td><code>--gray-800</code></td><td><code>$gray-800</code></td><td><code>#414554</code></td>
           </tr>
-          <tr class="text-white" style="background: var(--gray-900)">
+          <tr style="background: var(--gray-900); color: var(--gray-50);">
             <td><code>--gray-900</code></td><td><code>$gray-900</code></td><td><code>#353949</code></td>
           </tr>
-          <tr class="text-white" style="background: var(--gray-1000)">
-            <td><code>--gray-1000:</code></td><td><code>$gray-1000</code></td><td><code>#262934</code></td>
+          <tr style="background: var(--gray-1000); color: var(--gray-50);">
+            <td><code>--gray-1000</code></td><td><code>$gray-1000</code></td><td><code>#262934</code></td>
           </tr>
         </table>
       </b-card>
@@ -554,3 +554,9 @@ export default {
   layout: 'page'
 }
 </script>
+
+<style lang="scss" >
+.dark .text-black {
+  background: var(--gray-900);
+}
+</style>
