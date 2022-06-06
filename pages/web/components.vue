@@ -2,7 +2,7 @@
   <div>
     <h1>Components</h1>
     <p class="intro">
-      Components
+      Els components són els blocs de construcció de l'interfície d'usuari amb Blobby.
     </p>
     <section>
       <h2>Elements</h2>

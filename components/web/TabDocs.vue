@@ -72,7 +72,7 @@
                 <td>selected</td>
                 <td><small>Bool</small>. Si la pastilla està seleccionada o no.</td>
                 <td>
-                  <b-radio-values name="tab-list-variant" :values="[true, false]" disable-all />
+                  <b-radio-values v-model="tabList.variant" name="tab-list-variant" :values="[true, false]" disable-all />
                 </td>
               </tr>
               <tr>
@@ -105,7 +105,7 @@
           <flippable-card>
             <template #frontSide>
               <div class="offset">
-                <b-card-section :style="{ background }" class="background">
+                <b-card-section>
                   <b-tab-list v-bind="tabList">
                     <b-tab
                       :selected="selectedTab === 1"
@@ -147,7 +147,8 @@ const defaultTabListProps = {
   outline: false,
   muted: false,
   size: 'md',
-  focusDark: false
+  focusDark: false,
+  selected: false
 }
 
 export default {

@@ -72,7 +72,7 @@
           <flippable-card>
             <template #frontSide>
               <div class="offset">
-                <b-card-section :style="{ background }" class="background">
+                <b-card-section>
                   <b-pill-list>
                     <b-pill v-bind="pill">
                       Pastilla 1

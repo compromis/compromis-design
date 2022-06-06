@@ -4,7 +4,7 @@
       v-for="thisValue in values"
       :key="radioValue(thisValue)"
       v-model="selected"
-      :card="{size: 'sm', variant: 'outline', rises: false, focusDark: true}"
+      :card="{ size: 'sm', variant: 'outline', rises: false, focusDark: true }"
       class="px-2 py-1 text-sm"
       :name="name"
       :default-value="radioValue(thisValue)"

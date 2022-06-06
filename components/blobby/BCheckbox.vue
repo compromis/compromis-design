@@ -27,12 +27,12 @@ export default {
     },
 
     value: {
-      type: [Boolean, Array],
+      type: [Boolean, Array, String, Number],
       default: false
     },
 
     defaultValue: {
-      type: String,
+      type: [String, Number],
       default: 'true'
     },
 
