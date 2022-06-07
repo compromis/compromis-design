@@ -69,7 +69,7 @@
       </div>
       <div class="docs-col-preview">
         <div class="sticky">
-          <flippable-card>
+          <flippable-card card-edge :class="['card-background', 'variant-' + pill.variant]">
             <template #frontSide>
               <div class="offset">
                 <b-card-section>
@@ -106,7 +106,7 @@ const defaultPillProps = {
   size: 'md',
   focusDark: false,
   to: '',
-  href: '',
+  href: '#',
   as: 'span'
 }
 
@@ -140,3 +140,13 @@ export default {
   }
 }
 </script>
+
+<style scoped>
+.card-background {
+  --card-background: var(--gray-50);
+}
+
+.variant-supermuted {
+  --card-background: var(--white);
+}
+</style>

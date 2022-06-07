@@ -79,4 +79,8 @@ export default {
     }
   }
 }
+
+.dark .radio-values-group .radio-field.card.selected {
+  background: var(--gray-200);
+}
 </style>

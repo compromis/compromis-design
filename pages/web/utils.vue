@@ -555,7 +555,7 @@ export default {
 }
 </script>
 
-<style lang="scss" >
+<style lang="scss" scoped>
 .dark .text-black {
   background: var(--gray-900);
 }

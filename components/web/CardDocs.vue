@@ -221,7 +221,7 @@
       </div>
       <div class="docs-col-preview">
         <div class="sticky">
-          <flippable-card>
+          <flippable-card card-edge style="--card-background: var(--gray-50);">
             <template #frontSide>
               <b-card v-bind="card">
                 <b-card-section v-bind="cardSection">

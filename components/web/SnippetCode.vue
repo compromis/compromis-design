@@ -12,7 +12,9 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import "@compromis/blobby/scss/variables";
+
 /*
 Name: Duotone Space
 Author: Simurai, adapted from DuoTone themes for Atom (http://simurai.com/projects/2016/01/01/duotone-themes)
@@ -33,8 +35,8 @@ pre[class*="language-"] {
   tab-size: 4;
   hyphens: none;
   border: 0;
-  color: var(--gray-300);
-  background: var(--gray-1000);
+  color: $gray-300;
+  background: $gray-1000;
 }
 
 pre > code[class*="language-"] {
@@ -69,11 +71,11 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: var(--text-muted);
+  color: $text-muted;
 }
 
 .token.punctuation {
-  color: var(--gray-500);
+  color: $gray-500;
 }
 
 .token.namespace {
@@ -88,18 +90,18 @@ pre[class*="language-"] {
 
 .token.property,
 .token.function {
-  color: var(--gray-800);
+  color: $gray-800;
 }
 
 .token.tag-id,
 .token.selector,
 .token.atrule-id {
-  color: var(--gray-100);
+  color: $gray-100;
 }
 
 code.language-javascript,
 .token.attr-name {
-  color: var(--text-muted);
+  color: $text-muted;
 }
 
 code.language-css,
@@ -132,7 +134,7 @@ code.language-scss,
 }
 
 .token.inserted {
-  border-bottom: 1px dotted var(--gray-100);
+  border-bottom: 1px dotted $gray-100;
   text-decoration: none;
 }
 
@@ -146,7 +148,7 @@ code.language-scss,
 }
 
 .token.important {
-  color: var(--gray-300);
+  color: $gray-300;
 }
 
 .token.entity {
@@ -162,11 +164,11 @@ pre > code.highlight {
  * http://prismjs.com/plugins/line-numbers/
  */
 .line-numbers.line-numbers .line-numbers-rows {
-  border-right-color: var(--gray-1000);
+  border-right-color: $gray-1000;
 }
 
 .line-numbers .line-numbers-rows > span:before {
-  color: var(--gray-800);
+  color: $gray-800;
 }
 
 /* overrides color-values for the Line Highlight plugin
