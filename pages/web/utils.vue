@@ -290,7 +290,7 @@
           <tr class="text-white" style="background: var(--primary)">
             <td><code>--primary</code></td><td><code>$primary</code></td><td><code>#ff6720</code></td>
           </tr>
-          <tr class="text-white" style="background: var(--black)">
+          <tr style="background: var(--black); color: var(--white);">
             <td><code>--black</code></td><td><code>$black</code></td><td><code>#353949</code></td>
           </tr>
           <tr style="background: var(--white)">
