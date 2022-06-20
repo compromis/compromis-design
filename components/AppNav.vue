@@ -10,12 +10,13 @@
         </nuxt-link>
       </div>
     </div>
-    <div v-if="inside">
-      <b-checkbox v-model="dark" name="darkmode" default-value="true" is-switch>
-        <template #prepend>
-          Mode nit
-        </template>
-      </b-checkbox>
+    <div v-if="inside" class="dark-mode-toggle">
+      <button v-if="dark" title="Mode dia" class="dark-mode-button" @click="dark = false">
+        <span class="d-none d-md-inline">Mode dia</span> <fa :icon="['far', 'sun']" fixed-width />
+      </button>
+      <button v-else title="Mode nit" class="dark-mode-button" @click="dark = true">
+        <span class="d-none d-md-inline">Mode nit</span> <fa :icon="['far', 'moon']" fixed-width />
+      </button>
     </div>
     <button
       v-if="inside"
@@ -23,7 +24,7 @@
       type="button"
       aria-label="Obrir menú"
       aria-controls="sidebar"
-      :class="['menu-button d-block d-lg-none', {'is-active' : sidebarOpen}]"
+      :class="['menu-button d-block d-md-none', {'is-active' : sidebarOpen}]"
       @click="toggleSidebar"
     >
       <span class="burger-icon" />
@@ -117,6 +118,23 @@ export default {
     padding: 0;
     background-color: transparent;
     border: none;
+    margin-left: 1rem;
+  }
+
+  .dark-mode-toggle {
+    display: flex;
+    align-items: center;
+  }
+
+  .dark-mode-button {
+    appearance: none;
+    background: transparent;
+    color: var(--text-muted);
+    border: 0;
+
+    &:hover {
+      color: var(--text-color);
+    }
   }
 
   .burger-icon {
@@ -130,7 +148,7 @@ export default {
   @include media-breakpoint-down(lg) {
     .navbar {
       border-bottom: 1px solid var(--gray-200);
-      background: $white;
+      background: var(--body-bg);
     }
   }
 
