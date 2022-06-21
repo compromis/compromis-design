@@ -12,7 +12,7 @@
     </div>
     <div v-if="inside" class="dark-mode-toggle">
       <button v-if="dark" title="Mode dia" class="dark-mode-button" @click="dark = false">
-        <span class="d-none d-md-inline">Mode dia</span> <fa :icon="['far', 'sun']" fixed-width />
+        <span class="d-none d-md-inline">Mode dia</span> <fa :icon="['far', 'sun-bright']" fixed-width />
       </button>
       <button v-else title="Mode nit" class="dark-mode-button" @click="dark = true">
         <span class="d-none d-md-inline">Mode nit</span> <fa :icon="['far', 'moon']" fixed-width />
