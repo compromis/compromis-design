@@ -56,7 +56,7 @@ export default {
     '@nuxtjs/axios',
     'nuxt-clipboard2',
     ['vue-scrollto/nuxt', { offset: -80 }],
-    ['@nuxtjs/fontawesome', {
+    ['nuxt-fontawesome', {
       component: 'fa',
       imports: [
         {
@@ -71,7 +71,7 @@ export default {
             'faSendBackward', 'faUserCircle', 'faBook', 'faPhotoVideo', 'faPlay', 'faPortrait',
             'faEye', 'faEyeSlash', 'faNewspaper', 'faAlignLeft', 'faQuoteLeft', 'faLockAlt',
             'faEnvelope', 'faChevronDown', 'faLink', 'faCode', 'faWrench', 'faPuzzlePiece', 'faCog',
-            'faChevronLeft', 'faSunBright', 'faMoon'
+            'faChevronLeft', 'faSun', 'faMoon'
           ]
         }
       ]
